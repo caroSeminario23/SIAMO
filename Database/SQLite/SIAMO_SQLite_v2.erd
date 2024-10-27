@@ -5,10 +5,10 @@
     "width": 3000,
     "height": 3000,
     "scrollTop": 0,
-    "scrollLeft": 0,
+    "scrollLeft": -1098,
     "zoomLevel": 1,
     "show": 511,
-    "database": 16,
+    "database": 32,
     "databaseName": "",
     "canvasType": "ERD",
     "language": 1,
@@ -808,7 +808,7 @@
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "id_persona",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -819,7 +819,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729898655353,
+          "updateAt": 1730058830474,
           "createAt": 1728597147939
         }
       },
@@ -827,19 +827,19 @@
         "id": "vv5BudGUNPZZyVK19992M",
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "tipo_doc",
-        "comment": "true: dni, false: carnet extranjería",
-        "dataType": "boolean",
+        "comment": "0: dni, 1: carnet extranjería",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
-          "widthComment": 173,
+          "widthComment": 141,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729453430261,
+          "updateAt": 1730058843553,
           "createAt": 1728597217636
         }
       },
@@ -848,7 +848,7 @@
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "num_doc",
         "comment": "",
-        "dataType": "varchar(8)",
+        "dataType": "TEXT",
         "default": "",
         "options": 12,
         "ui": {
@@ -859,7 +859,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729898659224,
+          "updateAt": 1730058849660,
           "createAt": 1728597241969
         }
       },
@@ -868,18 +868,18 @@
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "nombres",
         "comment": "",
-        "dataType": "varchar(30)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 61,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374746156,
+          "updateAt": 1730058854134,
           "createAt": 1728597247454
         }
       },
@@ -888,18 +888,18 @@
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "apellidos",
         "comment": "",
-        "dataType": "varchar(50)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 61,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374749962,
+          "updateAt": 1730058858001,
           "createAt": 1728597251616
         }
       },
@@ -908,18 +908,18 @@
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "direccion",
         "comment": "",
-        "dataType": "varchar(100)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374753639,
+          "updateAt": 1730058860865,
           "createAt": 1728597265994
         }
       },
@@ -928,7 +928,7 @@
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "sexo",
         "comment": "F: femenino, M: masculino",
-        "dataType": "char(1)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
@@ -939,7 +939,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374814938,
+          "updateAt": 1730058868724,
           "createAt": 1728597269826
         }
       },
@@ -948,7 +948,7 @@
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "telefono",
         "comment": "",
-        "dataType": "varchar(9)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
@@ -959,7 +959,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729898690207,
+          "updateAt": 1730058938509,
           "createAt": 1728597278357
         }
       },
@@ -968,18 +968,18 @@
         "tableId": "ujgOSYnDYR2UAfM3SIvlG",
         "name": "correo",
         "comment": "",
-        "dataType": "varchar(50)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 61,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729898696627,
+          "updateAt": 1730058914318,
           "createAt": 1728597284265
         }
       },
@@ -988,7 +988,7 @@
         "tableId": "7q6WUbhrszyaP7Oufqnl4",
         "name": "id_cliente",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -999,7 +999,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729899225237,
+          "updateAt": 1730059097630,
           "createAt": 1728597314151
         }
       },
@@ -1028,7 +1028,7 @@
         "tableId": "_laSjPqKd3ALGT3vKwLz9",
         "name": "id_recepcionista",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -1039,7 +1039,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729899230900,
+          "updateAt": 1730058994037,
           "createAt": 1728597368169
         }
       },
@@ -1068,7 +1068,7 @@
         "tableId": "S3wG85jwQosHQ3yaezmmc",
         "name": "id_empleado",
         "comment": "privado",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -1079,7 +1079,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729898701782,
+          "updateAt": 1730058941571,
           "createAt": 1728597392645
         }
       },
@@ -1147,19 +1147,19 @@
         "id": "0-sP2qLj2Stfzq3PWxSNH",
         "tableId": "S3wG85jwQosHQ3yaezmmc",
         "name": "fecha_ingreso",
-        "comment": "contratación",
-        "dataType": "date",
+        "comment": "contratación YYYY-MM-DD",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 75,
-          "widthComment": 68,
+          "widthComment": 146,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729375170332,
+          "updateAt": 1730058986718,
           "createAt": 1728597433274
         }
       },
@@ -1188,7 +1188,7 @@
         "tableId": "T5pYLhceWRJCePQGyBefY",
         "name": "id_tecnico",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -1199,7 +1199,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729899243385,
+          "updateAt": 1730059030458,
           "createAt": 1728597495260
         }
       },
@@ -1328,7 +1328,7 @@
         "tableId": "C-tR074Zv3AfKWGmk7eec",
         "name": "id_informe_tecnico",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 10,
         "ui": {
@@ -1339,7 +1339,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729375967012,
+          "updateAt": 1730059300538,
           "createAt": 1728597726437
         }
       },
@@ -1408,7 +1408,7 @@
         "tableId": "pTjQukxUVz0CBhWaQv3s8",
         "name": "id_problema",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -1419,7 +1419,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729901234438,
+          "updateAt": 1730059133718,
           "createAt": 1728597845679
         }
       },
@@ -1448,18 +1448,18 @@
         "tableId": "pTjQukxUVz0CBhWaQv3s8",
         "name": "descripcion",
         "comment": "breve",
-        "dataType": "varchar(50)",
+        "dataType": "TEXT",
         "default": "",
         "options": 12,
         "ui": {
           "keys": 0,
           "widthName": 62,
           "widthComment": 60,
-          "widthDataType": 61,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729903888234,
+          "updateAt": 1730059138474,
           "createAt": 1728597861373
         }
       },
@@ -1468,7 +1468,7 @@
         "tableId": "VExyGIErBfxGSsYHn_ukg",
         "name": "id_solucion",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -1479,7 +1479,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729903878617,
+          "updateAt": 1730059135056,
           "createAt": 1728597867762
         }
       },
@@ -1488,18 +1488,18 @@
         "tableId": "VExyGIErBfxGSsYHn_ukg",
         "name": "descripcion",
         "comment": "",
-        "dataType": "varchar(250)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 62,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729376196434,
+          "updateAt": 1730059355044,
           "createAt": 1728597872044
         }
       },
@@ -1528,7 +1528,7 @@
         "tableId": "7q6WUbhrszyaP7Oufqnl4",
         "name": "id_persona",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -1539,7 +1539,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374682808,
+          "updateAt": 1730058830474,
           "createAt": 1728679408799
         }
       },
@@ -1548,7 +1548,7 @@
         "tableId": "S3wG85jwQosHQ3yaezmmc",
         "name": "id_persona",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -1559,7 +1559,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374682808,
+          "updateAt": 1730058830474,
           "createAt": 1728679486910
         }
       },
@@ -1568,7 +1568,7 @@
         "tableId": "_laSjPqKd3ALGT3vKwLz9",
         "name": "id_empleado",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -1579,7 +1579,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374680889,
+          "updateAt": 1730058941571,
           "createAt": 1728679601504
         }
       },
@@ -1588,7 +1588,7 @@
         "tableId": "T5pYLhceWRJCePQGyBefY",
         "name": "id_empleado",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -1599,7 +1599,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374680889,
+          "updateAt": 1730058941571,
           "createAt": 1728679669331
         }
       },
@@ -1648,7 +1648,7 @@
         "tableId": "YJkSaWp3sW8nIz8lc9xOo",
         "name": "id_ost",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -1659,7 +1659,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729903805383,
+          "updateAt": 1730059068868,
           "createAt": 1728679859363
         }
       },
@@ -1708,7 +1708,7 @@
         "tableId": "C-tR074Zv3AfKWGmk7eec",
         "name": "id_ost",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -1719,7 +1719,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729375235434,
+          "updateAt": 1730059068868,
           "createAt": 1728680110758
         }
       },
@@ -1808,7 +1808,7 @@
         "tableId": "pTjQukxUVz0CBhWaQv3s8",
         "name": "id_solucion",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -1819,7 +1819,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729375947853,
+          "updateAt": 1730059135056,
           "createAt": 1728680266324
         }
       },
@@ -1868,7 +1868,7 @@
         "tableId": "YJkSaWp3sW8nIz8lc9xOo",
         "name": "estado",
         "comment": "0: en proceso, 1: resuelto, 2: cancelado, 3: abandonado",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -1879,7 +1879,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729982737286,
+          "updateAt": 1730059079178,
           "createAt": 1728684862070
         }
       },
@@ -1887,19 +1887,19 @@
         "id": "K6Ovlr_O4z0E2jzYNsc0-",
         "tableId": "YJkSaWp3sW8nIz8lc9xOo",
         "name": "fecha_registro",
-        "comment": "",
-        "dataType": "date",
+        "comment": "YYYY-MM-DD",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 76,
-          "widthComment": 60,
+          "widthComment": 77,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729375310586,
+          "updateAt": 1730059076618,
           "createAt": 1728684950611
         }
       },
@@ -1928,7 +1928,7 @@
         "tableId": "S3wG85jwQosHQ3yaezmmc",
         "name": "cod_empleado",
         "comment": "público (inicio sesión)",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -1939,7 +1939,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729374851502,
+          "updateAt": 1730058966702,
           "createAt": 1729374623244
         }
       },
@@ -1948,18 +1948,18 @@
         "tableId": "S3wG85jwQosHQ3yaezmmc",
         "name": "contrasenia",
         "comment": "",
-        "dataType": "varchar(255)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 63,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729375192464,
+          "updateAt": 1730058969804,
           "createAt": 1729375175074
         }
       },
@@ -2048,18 +2048,18 @@
         "tableId": "pTjQukxUVz0CBhWaQv3s8",
         "name": "detalle",
         "comment": "",
-        "dataType": "varchar(250)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729376186952,
+          "updateAt": 1730059142383,
           "createAt": 1729375932493
         }
       },
@@ -2148,18 +2148,18 @@
         "tableId": "C-tR074Zv3AfKWGmk7eec",
         "name": "detalle_reparacion",
         "comment": "de reparaciones",
-        "dataType": "varchar(250)",
+        "dataType": "TEXT",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 99,
           "widthComment": 86,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902582169,
+          "updateAt": 1730059312800,
           "createAt": 1729376126979
         }
       },
@@ -2168,7 +2168,7 @@
         "tableId": "ypHdJDBDHvw3ZwJHaGq5e",
         "name": "id_automovil",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -2179,7 +2179,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729899246539,
+          "updateAt": 1730059100290,
           "createAt": 1729898582882
         }
       },
@@ -2188,7 +2188,7 @@
         "tableId": "ypHdJDBDHvw3ZwJHaGq5e",
         "name": "placa",
         "comment": "",
-        "dataType": "varchar(8)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
@@ -2199,7 +2199,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729899247898,
+          "updateAt": 1730059103619,
           "createAt": 1729898590982
         }
       },
@@ -2208,18 +2208,18 @@
         "tableId": "ypHdJDBDHvw3ZwJHaGq5e",
         "name": "marca",
         "comment": "",
-        "dataType": "varchar(15)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 61,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729899249082,
+          "updateAt": 1730059106395,
           "createAt": 1729898594063
         }
       },
@@ -2228,18 +2228,18 @@
         "tableId": "ypHdJDBDHvw3ZwJHaGq5e",
         "name": "modelo",
         "comment": "",
-        "dataType": "varchar(50)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 61,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729899249859,
+          "updateAt": 1730059108789,
           "createAt": 1729898602030
         }
       },
@@ -2248,7 +2248,7 @@
         "tableId": "ypHdJDBDHvw3ZwJHaGq5e",
         "name": "id_cliente",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -2259,7 +2259,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729898948341,
+          "updateAt": 1730059097630,
           "createAt": 1729898948340
         }
       },
@@ -2268,7 +2268,7 @@
         "tableId": "m1kKGcBfELxHs3JWk31dr",
         "name": "id_consulta",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -2279,7 +2279,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981254862,
+          "updateAt": 1730059081110,
           "createAt": 1729899192967
         }
       },
@@ -2288,7 +2288,7 @@
         "tableId": "m1kKGcBfELxHs3JWk31dr",
         "name": "id_cliente",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -2299,7 +2299,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729899217253,
+          "updateAt": 1730059097630,
           "createAt": 1729899217253
         }
       },
@@ -2308,18 +2308,18 @@
         "tableId": "m1kKGcBfELxHs3JWk31dr",
         "name": "prob_declarado",
         "comment": "por el cliente",
-        "dataType": "varchar(200)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 85,
           "widthComment": 71,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729901355093,
+          "updateAt": 1730059122267,
           "createAt": 1729899290350
         }
       },
@@ -2328,7 +2328,7 @@
         "tableId": "m1kKGcBfELxHs3JWk31dr",
         "name": "id_tecnico",
         "comment": "diagnostico inicial",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -2339,7 +2339,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729900252992,
+          "updateAt": 1730059030458,
           "createAt": 1729899310910
         }
       },
@@ -2348,7 +2348,7 @@
         "tableId": "m1kKGcBfELxHs3JWk31dr",
         "name": "estado",
         "comment": "0: en espera, 1: cancelado, 2: procede",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "0",
         "options": 8,
         "ui": {
@@ -2359,7 +2359,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729978140946,
+          "updateAt": 1730059126489,
           "createAt": 1729899383086
         }
       },
@@ -2408,7 +2408,7 @@
         "tableId": "z9kiXzNvB1PboIhdty99P",
         "name": "id_consulta",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 10,
         "ui": {
@@ -2419,7 +2419,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981267935,
+          "updateAt": 1730059081110,
           "createAt": 1729899723017
         }
       },
@@ -2428,7 +2428,7 @@
         "tableId": "z9kiXzNvB1PboIhdty99P",
         "name": "id_problema",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 10,
         "ui": {
@@ -2439,7 +2439,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729900339623,
+          "updateAt": 1730059133718,
           "createAt": 1729900209977
         }
       },
@@ -2448,7 +2448,7 @@
         "tableId": "YY4Ymm-IU6aTiT64pQb20",
         "name": "id_repuesto",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -2459,7 +2459,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729900637269,
+          "updateAt": 1730059198599,
           "createAt": 1729900571155
         }
       },
@@ -2468,18 +2468,18 @@
         "tableId": "YY4Ymm-IU6aTiT64pQb20",
         "name": "descripcion",
         "comment": "",
-        "dataType": "varchar(50)",
+        "dataType": "TEXT",
         "default": "",
         "options": 12,
         "ui": {
           "keys": 0,
           "widthName": 62,
           "widthComment": 60,
-          "widthDataType": 61,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729900641032,
+          "updateAt": 1730059202415,
           "createAt": 1729900575688
         }
       },
@@ -2488,18 +2488,18 @@
         "tableId": "YY4Ymm-IU6aTiT64pQb20",
         "name": "precio",
         "comment": "",
-        "dataType": "money",
+        "dataType": "NUMERIC(7, 2)",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 80,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729900631870,
+          "updateAt": 1730059208640,
           "createAt": 1729900593856
         }
       },
@@ -2508,7 +2508,7 @@
         "tableId": "e_FVioB9xa0eyKe8n_qxM",
         "name": "id_presupuesto",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -2519,7 +2519,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729900927613,
+          "updateAt": 1730059145536,
           "createAt": 1729900677863
         }
       },
@@ -2528,18 +2528,18 @@
         "tableId": "e_FVioB9xa0eyKe8n_qxM",
         "name": "tarifa_mano_obra",
         "comment": "segun n tecnicos y complejidad",
-        "dataType": "money",
+        "dataType": "NUMERIC(7, 2)",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 94,
           "widthComment": 168,
-          "widthDataType": 60,
+          "widthDataType": 80,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902559448,
+          "updateAt": 1730059173963,
           "createAt": 1729900682305
         }
       },
@@ -2548,18 +2548,18 @@
         "tableId": "e_FVioB9xa0eyKe8n_qxM",
         "name": "tarifa_repuestos",
         "comment": "",
-        "dataType": "money",
+        "dataType": "NUMERIC(7, 2)",
         "default": "0",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 86,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 80,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729900918492,
+          "updateAt": 1730059183077,
           "createAt": 1729900808304
         }
       },
@@ -2588,7 +2588,7 @@
         "tableId": "snqlJFlUcK4U1z9viB4g7",
         "name": "id_presupuesto",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 10,
         "ui": {
@@ -2599,7 +2599,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729901075129,
+          "updateAt": 1730059145536,
           "createAt": 1729900944436
         }
       },
@@ -2608,7 +2608,7 @@
         "tableId": "snqlJFlUcK4U1z9viB4g7",
         "name": "id_repuesto",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 10,
         "ui": {
@@ -2619,7 +2619,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729901076502,
+          "updateAt": 1730059198599,
           "createAt": 1729900951340
         }
       },
@@ -2628,7 +2628,7 @@
         "tableId": "e_FVioB9xa0eyKe8n_qxM",
         "name": "id_consulta",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -2639,7 +2639,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981262340,
+          "updateAt": 1730059081110,
           "createAt": 1729901107712
         }
       },
@@ -2668,7 +2668,7 @@
         "tableId": "O8GTSTyLhZbxYcZXGyoGL",
         "name": "id_estado_vehiculo",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -2679,7 +2679,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902199459,
+          "updateAt": 1730059284334,
           "createAt": 1729901469105
         }
       },
@@ -2688,18 +2688,18 @@
         "tableId": "O8GTSTyLhZbxYcZXGyoGL",
         "name": "estado_carroceria",
         "comment": "",
-        "dataType": "varchar(200)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 95,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902194903,
+          "updateAt": 1730059287485,
           "createAt": 1729901477044
         }
       },
@@ -2708,18 +2708,18 @@
         "tableId": "O8GTSTyLhZbxYcZXGyoGL",
         "name": "estado_neumaticos",
         "comment": "",
-        "dataType": "varchar(200)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 104,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902195711,
+          "updateAt": 1730059289883,
           "createAt": 1729901584287
         }
       },
@@ -2728,18 +2728,18 @@
         "tableId": "O8GTSTyLhZbxYcZXGyoGL",
         "name": "estado_motor",
         "comment": "",
-        "dataType": "varchar(200)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 75,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902196227,
+          "updateAt": 1730059292117,
           "createAt": 1729901711208
         }
       },
@@ -2748,18 +2748,18 @@
         "tableId": "O8GTSTyLhZbxYcZXGyoGL",
         "name": "estado_frenos",
         "comment": "",
-        "dataType": "varchar(200)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 76,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902196803,
+          "updateAt": 1730059294590,
           "createAt": 1729901727600
         }
       },
@@ -2808,7 +2808,7 @@
         "tableId": "6kf-EX7qiq5fklL1jT6ek",
         "name": "id_lista_tareas",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -2819,7 +2819,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902949356,
+          "updateAt": 1730059067785,
           "createAt": 1729902724941
         }
       },
@@ -2828,7 +2828,7 @@
         "tableId": "6kf-EX7qiq5fklL1jT6ek",
         "name": "id_ost",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -2839,7 +2839,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902787284,
+          "updateAt": 1730059068868,
           "createAt": 1729902787284
         }
       },
@@ -2848,18 +2848,18 @@
         "tableId": "cUx72q96pEK_FFbfjR89X",
         "name": "descripcion",
         "comment": "",
-        "dataType": "varchar(50)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 62,
           "widthComment": 60,
-          "widthDataType": 61,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902941793,
+          "updateAt": 1730059021308,
           "createAt": 1729902883096
         }
       },
@@ -2868,7 +2868,7 @@
         "tableId": "cUx72q96pEK_FFbfjR89X",
         "name": "id_tarea",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -2879,7 +2879,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902951220,
+          "updateAt": 1730058997380,
           "createAt": 1729902895170
         }
       },
@@ -2888,7 +2888,7 @@
         "tableId": "cUx72q96pEK_FFbfjR89X",
         "name": "id_lista_tareas",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -2899,7 +2899,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729902932689,
+          "updateAt": 1730059067785,
           "createAt": 1729902919150
         }
       },
@@ -2908,7 +2908,7 @@
         "tableId": "cUx72q96pEK_FFbfjR89X",
         "name": "id_tecnico",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -2919,7 +2919,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729903074594,
+          "updateAt": 1730059030458,
           "createAt": 1729903074594
         }
       },
@@ -2927,19 +2927,19 @@
         "id": "92uR_kiZ7bB05U1qrpPEg",
         "tableId": "cUx72q96pEK_FFbfjR89X",
         "name": "estado",
-        "comment": "",
-        "dataType": "boolean",
-        "default": "false",
+        "comment": "0: completado, 1: no completado",
+        "dataType": "INTEGER",
+        "default": "1",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
-          "widthComment": 60,
+          "widthComment": 177,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729903101225,
+          "updateAt": 1730059063979,
           "createAt": 1729903090339
         }
       },
@@ -2948,7 +2948,7 @@
         "tableId": "YJkSaWp3sW8nIz8lc9xOo",
         "name": "id_consulta",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -2959,7 +2959,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981274005,
+          "updateAt": 1730059081110,
           "createAt": 1729903680810
         }
       },
@@ -2968,18 +2968,18 @@
         "tableId": "e_FVioB9xa0eyKe8n_qxM",
         "name": "descuento_negociado",
         "comment": "",
-        "dataType": "money",
+        "dataType": "NUMERIC(7, 2)",
         "default": "0",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 118,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 80,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729985091338,
+          "updateAt": 1730059190814,
           "createAt": 1729978236756
         }
       },
@@ -2988,7 +2988,7 @@
         "tableId": "snqlJFlUcK4U1z9viB4g7",
         "name": "cantidad",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "1",
         "options": 8,
         "ui": {
@@ -2999,7 +2999,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729978347789,
+          "updateAt": 1730059211873,
           "createAt": 1729978333428
         }
       },
@@ -3008,18 +3008,18 @@
         "tableId": "C-tR074Zv3AfKWGmk7eec",
         "name": "observaciones",
         "comment": "",
-        "dataType": "varchar(300)",
+        "dataType": "TEXT",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 77,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729978598935,
+          "updateAt": 1730059315124,
           "createAt": 1729978589114
         }
       },
@@ -3028,18 +3028,18 @@
         "tableId": "C-tR074Zv3AfKWGmk7eec",
         "name": "saldo_final",
         "comment": "",
-        "dataType": "money",
+        "dataType": "NUMERIC(7, 2)",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 80,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729979488411,
+          "updateAt": 1730059322178,
           "createAt": 1729979452724
         }
       },
@@ -3048,7 +3048,7 @@
         "tableId": "y6X9QL6AoZlggd-jqUZRg",
         "name": "id_imprevisto",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -3059,7 +3059,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729983151224,
+          "updateAt": 1730059334363,
           "createAt": 1729979499257
         }
       },
@@ -3068,7 +3068,7 @@
         "tableId": "C-tR074Zv3AfKWGmk7eec",
         "name": "id_imprevisto",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -3079,7 +3079,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729983061335,
+          "updateAt": 1730059334363,
           "createAt": 1729979515928
         }
       },
@@ -3128,7 +3128,7 @@
         "tableId": "nPL6e7rsbVas4zGUEbfH6",
         "name": "id_ficha_salida",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -3139,7 +3139,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729985192277,
+          "updateAt": 1730059223385,
           "createAt": 1729981049576
         }
       },
@@ -3147,19 +3147,19 @@
         "id": "DwYv0BuPxVwWaa2Zsfa-q",
         "tableId": "nPL6e7rsbVas4zGUEbfH6",
         "name": "fecha_recojo",
-        "comment": "real",
-        "dataType": "timestamp",
+        "comment": "real YYYY-MM-DD HH:MM:SS",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 68,
-          "widthComment": 60,
+          "widthComment": 159,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729985193415,
+          "updateAt": 1730059247004,
           "createAt": 1729981059781
         }
       },
@@ -3168,7 +3168,7 @@
         "tableId": "nPL6e7rsbVas4zGUEbfH6",
         "name": "id_ost",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -3179,7 +3179,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981105803,
+          "updateAt": 1730059068868,
           "createAt": 1729981105802
         }
       },
@@ -3188,18 +3188,18 @@
         "tableId": "y6X9QL6AoZlggd-jqUZRg",
         "name": "descripcion",
         "comment": "",
-        "dataType": "varchar(300)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 62,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729983147192,
+          "updateAt": 1730059339319,
           "createAt": 1729981134861
         }
       },
@@ -3208,18 +3208,18 @@
         "tableId": "y6X9QL6AoZlggd-jqUZRg",
         "name": "solucion",
         "comment": "",
-        "dataType": "varchar(300)",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 67,
+          "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729983147846,
+          "updateAt": 1730059341652,
           "createAt": 1729981173937
         }
       },
@@ -3228,7 +3228,7 @@
         "tableId": "sh7Ipqwh8sc589qgmj8j1",
         "name": "id_ficha_ingreso",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 11,
         "ui": {
@@ -3239,7 +3239,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981424909,
+          "updateAt": 1730059254011,
           "createAt": 1729981297235
         }
       },
@@ -3247,19 +3247,19 @@
         "id": "FSlvWUeNYGIiz9KcEfn8y",
         "tableId": "sh7Ipqwh8sc589qgmj8j1",
         "name": "fecha_ingreso",
-        "comment": "",
-        "dataType": "timestamp",
+        "comment": "YYYY-MM-DD HH:MM:SS",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 75,
-          "widthComment": 60,
+          "widthComment": 136,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981426647,
+          "updateAt": 1730059271463,
           "createAt": 1729981301696
         }
       },
@@ -3267,19 +3267,19 @@
         "id": "Q5xGbW7CK85mICwXRp9y6",
         "tableId": "sh7Ipqwh8sc589qgmj8j1",
         "name": "fecha_recogida_aprox",
-        "comment": "",
-        "dataType": "timestamp",
+        "comment": "YYYY-MM-DD HH:MM:SS",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 116,
-          "widthComment": 60,
+          "widthComment": 136,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981427551,
+          "updateAt": 1730059278091,
           "createAt": 1729981309772
         }
       },
@@ -3308,7 +3308,7 @@
         "tableId": "sh7Ipqwh8sc589qgmj8j1",
         "name": "id_ost",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -3319,7 +3319,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981415578,
+          "updateAt": 1730059068868,
           "createAt": 1729981415578
         }
       },
@@ -3348,7 +3348,7 @@
         "tableId": "O8GTSTyLhZbxYcZXGyoGL",
         "name": "id_ficha_ingreso",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -3359,7 +3359,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981464892,
+          "updateAt": 1730059254011,
           "createAt": 1729981464892
         }
       },
@@ -3367,19 +3367,19 @@
         "id": "OAmTLqUabMSeMHwrGUnlR",
         "tableId": "YJkSaWp3sW8nIz8lc9xOo",
         "name": "fecha_aprox_ingreso",
-        "comment": "",
-        "dataType": "date",
+        "comment": "YYYY-MM-DD",
+        "dataType": "TEXT",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 110,
-          "widthComment": 60,
+          "widthComment": 77,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729981716530,
+          "updateAt": 1730059089022,
           "createAt": 1729981697506
         }
       },
@@ -3388,18 +3388,18 @@
         "tableId": "y6X9QL6AoZlggd-jqUZRg",
         "name": "precio",
         "comment": "",
-        "dataType": "money",
+        "dataType": "NUMERIC(7, 2)",
         "default": "",
         "options": 8,
         "ui": {
           "keys": 0,
           "widthName": 60,
           "widthComment": 60,
-          "widthDataType": 60,
+          "widthDataType": 80,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729983148737,
+          "updateAt": 1730059348822,
           "createAt": 1729982297614
         }
       },
@@ -3427,19 +3427,19 @@
         "id": "GYo1CUQfjue7t6bf_WLsV",
         "tableId": "C-tR074Zv3AfKWGmk7eec",
         "name": "fecha_inicio_reparacion",
-        "comment": "",
-        "dataType": "date",
+        "comment": "YYYY-MM-DD",
+        "dataType": "TEXT",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 125,
-          "widthComment": 60,
+          "widthComment": 77,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729982461261,
+          "updateAt": 1730059309092,
           "createAt": 1729982431035
         }
       },
@@ -3447,19 +3447,19 @@
         "id": "L5X5DnZw0xkxhVabEcluj",
         "tableId": "C-tR074Zv3AfKWGmk7eec",
         "name": "fecha_fin_reparacion",
-        "comment": "",
-        "dataType": "date",
+        "comment": "YYYY-MM-DD",
+        "dataType": "TEXT",
         "default": "",
         "options": 0,
         "ui": {
           "keys": 0,
           "widthName": 110,
-          "widthComment": 60,
+          "widthComment": 77,
           "widthDataType": 60,
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729982463597,
+          "updateAt": 1730059332123,
           "createAt": 1729982440001
         }
       },
@@ -3468,7 +3468,7 @@
         "tableId": "m1kKGcBfELxHs3JWk31dr",
         "name": "id_automovil",
         "comment": "",
-        "dataType": "int",
+        "dataType": "INTEGER",
         "default": "",
         "options": 8,
         "ui": {
@@ -3479,7 +3479,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1729992119029,
+          "updateAt": 1730059100290,
           "createAt": 1729992119027
         }
       }
@@ -3495,7 +3495,7 @@
           "columnIds": [
             "ImJb1B0eqOb_z8o8XGneY"
           ],
-          "x": 570,
+          "x": 531,
           "y": 161,
           "direction": 2
         },
@@ -3523,7 +3523,7 @@
           "columnIds": [
             "ImJb1B0eqOb_z8o8XGneY"
           ],
-          "x": 301,
+          "x": 281.5,
           "y": 297,
           "direction": 8
         },
@@ -3532,7 +3532,7 @@
           "columnIds": [
             "jhKc6mR089xfwf7tErEBS"
           ],
-          "x": 276.9452,
+          "x": 288.4452,
           "y": 442.8704,
           "direction": 4
         },
@@ -3551,7 +3551,7 @@
           "columnIds": [
             "uqSTtKG2Bi0swIhBxdxIE"
           ],
-          "x": 276.9452,
+          "x": 288.4452,
           "y": 618.8704,
           "direction": 8
         },
@@ -3579,7 +3579,7 @@
           "columnIds": [
             "uqSTtKG2Bi0swIhBxdxIE"
           ],
-          "x": 527.4452,
+          "x": 550.4452,
           "y": 530.8704,
           "direction": 2
         },
@@ -3635,7 +3635,7 @@
           "columnIds": [
             "CReohzFMEdVn5cHUXFSgL"
           ],
-          "x": 1793.5057,
+          "x": 1786.5057,
           "y": 1138.7128,
           "direction": 2
         },
@@ -3644,7 +3644,7 @@
           "columnIds": [
             "ZGnL_H6BiP0PXOsg7P_V2"
           ],
-          "x": 1810.3569,
+          "x": 1806.8569,
           "y": 1024.9562,
           "direction": 8
         },
@@ -3672,7 +3672,7 @@
           "columnIds": [
             "Cu6QYDxXBtVTpOwP1O76K"
           ],
-          "x": 946.366,
+          "x": 945.866,
           "y": 239.5876,
           "direction": 4
         },
@@ -3747,7 +3747,7 @@
           "columnIds": [
             "bzwg0IpJSJoib2fP1fSIT"
           ],
-          "x": 2254.9249,
+          "x": 2253.1749,
           "y": 575.2408,
           "direction": 8
         },
@@ -3775,7 +3775,7 @@
           "columnIds": [
             "ZSOJlTXxbNTwHXc6Ns5Uu"
           ],
-          "x": 2026.8569,
+          "x": 2019.8569,
           "y": 948.9562,
           "direction": 2
         },
@@ -3803,7 +3803,7 @@
           "columnIds": [
             "orcUq8eT1a_7y4EWfDLl8"
           ],
-          "x": 2664.6106,
+          "x": 2674.6106,
           "y": 1166.1538,
           "direction": 8
         },
@@ -3831,7 +3831,7 @@
           "columnIds": [
             "sFIQzhUoJj18a3GFzdfIV"
           ],
-          "x": 2597.8749,
+          "x": 2607.3749,
           "y": 1548.3835,
           "direction": 4
         },
@@ -3859,7 +3859,7 @@
           "columnIds": [
             "bzwg0IpJSJoib2fP1fSIT"
           ],
-          "x": 2549.4249,
+          "x": 2544.1749,
           "y": 575.2408,
           "direction": 8
         },
@@ -3868,7 +3868,7 @@
           "columnIds": [
             "vvIT65cnmVJOOnsnH1cA9"
           ],
-          "x": 2664.6106,
+          "x": 2674.6106,
           "y": 990.1538,
           "direction": 4
         },
@@ -3980,7 +3980,7 @@
           "columnIds": [
             "37V00mwRWb1pZwbytZtU_"
           ],
-          "x": 366.6732,
+          "x": 424.6732,
           "y": 1047.8523,
           "direction": 8
         },
@@ -4008,7 +4008,7 @@
           "columnIds": [
             "if9PvTZmIakk8Y-iizHRp"
           ],
-          "x": 583.6732,
+          "x": 699.6732,
           "y": 959.8523,
           "direction": 2
         },
@@ -4064,7 +4064,7 @@
           "columnIds": [
             "ltkJDvH2zYHSbzt4uvn6Y"
           ],
-          "x": 1651.464,
+          "x": 1664.464,
           "y": 1468.1331,
           "direction": 2
         },
@@ -4223,7 +4223,7 @@
           "columnIds": [
             "XMhsIcJcAuVZtbo6VkYOl"
           ],
-          "x": 1621.1864,
+          "x": 1697.1864,
           "y": 1895.9469,
           "direction": 2
         },
@@ -4251,7 +4251,7 @@
           "columnIds": [
             "KbuI6WLGiQShinpV4Q74O"
           ],
-          "x": 1160.866,
+          "x": 1159.866,
           "y": 327.5876,
           "direction": 2
         },
@@ -4575,7 +4575,7 @@
       -1,
       {
         "name": 1728597215589,
-        "dataType": 1729374682807,
+        "dataType": 1730058830473,
         "options(notNull)": 1728679252459,
         "options(primaryKey)": 1728679371736,
         "options(autoIncrement)": 1729898655352
@@ -4587,9 +4587,9 @@
       -1,
       {
         "name": 1728597239515,
-        "dataType": 1729374793354,
+        "dataType": 1730058835808,
         "options(notNull)": 1728679299058,
-        "comment": 1729453430258
+        "comment": 1730058843548
       }
     ],
     "QNSK-dKAaUMUKs1afvOj1": [
@@ -4598,7 +4598,7 @@
       -1,
       {
         "name": 1728597244715,
-        "dataType": 1729374741869,
+        "dataType": 1730058849660,
         "options(notNull)": 1728679299835,
         "options(unique)": 1729898659223
       }
@@ -4609,7 +4609,7 @@
       -1,
       {
         "name": 1728597249949,
-        "dataType": 1729374746149,
+        "dataType": 1730058854134,
         "options(notNull)": 1728679300945
       }
     ],
@@ -4619,7 +4619,7 @@
       -1,
       {
         "name": 1728597254091,
-        "dataType": 1729374749937,
+        "dataType": 1730058858000,
         "options(notNull)": 1728679301909
       }
     ],
@@ -4629,7 +4629,7 @@
       -1,
       {
         "name": 1728597268390,
-        "dataType": 1729374753631,
+        "dataType": 1730058860864,
         "options(notNull)": 1728679302411
       }
     ],
@@ -4639,7 +4639,7 @@
       -1,
       {
         "name": 1728597276264,
-        "dataType": 1729374758628,
+        "dataType": 1730058868723,
         "options(notNull)": 1728679303189,
         "comment": 1729374814937
       }
@@ -4650,7 +4650,7 @@
       -1,
       {
         "name": 1728597281634,
-        "dataType": 1729374762230,
+        "dataType": 1730058938508,
         "options(notNull)": 1728679303744,
         "options(unique)": 1729898690207
       }
@@ -4661,7 +4661,7 @@
       -1,
       {
         "name": 1728597286715,
-        "dataType": 1729374765975,
+        "dataType": 1730058914317,
         "options(notNull)": 1728679304500,
         "options(unique)": 1729898696627
       }
@@ -4672,7 +4672,7 @@
       -1,
       {
         "name": 1728597318845,
-        "dataType": 1729375220980,
+        "dataType": 1730059097629,
         "options(notNull)": 1728679347300,
         "options(primaryKey)": 1728679351433,
         "options(autoIncrement)": 1729899225236
@@ -4695,7 +4695,7 @@
       {
         "name": 1728597376291,
         "options(primaryKey)": 1728679607143,
-        "dataType": 1729375125044,
+        "dataType": 1730058994036,
         "options(autoIncrement)": 1729899230900
       }
     ],
@@ -4722,7 +4722,7 @@
       {
         "name": 1728597396654,
         "options(primaryKey)": 1728679434619,
-        "dataType": 1729374680888,
+        "dataType": 1730058941570,
         "comment": 1729374830182,
         "options(autoIncrement)": 1729898701782
       }
@@ -4764,8 +4764,8 @@
       {
         "name": 1729375161890,
         "options(notNull)": 1728679439997,
-        "dataType": 1729374684272,
-        "comment": 1729375170331
+        "dataType": 1730058947184,
+        "comment": 1730058986713
       }
     ],
     "APE8Evhdwq_qukqfK--3H": [
@@ -4784,7 +4784,7 @@
       -1,
       {
         "name": 1728597499200,
-        "dataType": 1729375128728,
+        "dataType": 1730059030457,
         "options(notNull)": 1728679663364,
         "options(primaryKey)": 1728679677191,
         "options(unique)": 1729899242558,
@@ -4867,7 +4867,7 @@
       {
         "name": 1728684529258,
         "options(primaryKey)": 1728679962040,
-        "dataType": 1729375967011
+        "dataType": 1730059300537
       }
     ],
     "WIhguNqm_F0tyKUI8ybsX": [
@@ -4906,7 +4906,7 @@
       {
         "name": 1728597852148,
         "options(notNull)": 1728680153727,
-        "dataType": 1729375946939,
+        "dataType": 1730059133717,
         "options(primaryKey)": 1728680169347,
         "options(autoIncrement)": 1729901234437
       }
@@ -4928,7 +4928,7 @@
       {
         "name": 1728597865621,
         "options(notNull)": 1728680155009,
-        "dataType": 1729376190834,
+        "dataType": 1730059138473,
         "comment": 1729375930174,
         "options(unique)": 1729903888233
       }
@@ -4939,7 +4939,7 @@
       -1,
       {
         "name": 1728597870575,
-        "dataType": 1729375947853,
+        "dataType": 1730059135056,
         "options(primaryKey)": 1728680250134,
         "options(autoIncrement)": 1729903878616
       }
@@ -4950,7 +4950,7 @@
       -1,
       {
         "name": 1728597879347,
-        "dataType": 1729376196432,
+        "dataType": 1730059355044,
         "options(notNull)": 1728680252032
       }
     ],
@@ -4999,7 +4999,7 @@
       {
         "options(notNull)": 1728679408797,
         "name": 1728679408797,
-        "dataType": 1729374682807,
+        "dataType": 1730058830473,
         "default": 1728679408797,
         "comment": 1728679408797
       }
@@ -5017,7 +5017,7 @@
       {
         "options(notNull)": 1728679486908,
         "name": 1728679486908,
-        "dataType": 1729374682807,
+        "dataType": 1730058830473,
         "default": 1728679486908,
         "comment": 1728679486908
       }
@@ -5050,7 +5050,7 @@
       {
         "options(notNull)": 1728679601503,
         "name": 1728679601503,
-        "dataType": 1729374680888,
+        "dataType": 1730058941570,
         "default": 1728679601503,
         "comment": 1728679601503
       }
@@ -5083,7 +5083,7 @@
       {
         "options(notNull)": 1728679669329,
         "name": 1728679669329,
-        "dataType": 1729374680888,
+        "dataType": 1730058941570,
         "default": 1728679669329,
         "comment": 1728679669329
       }
@@ -5140,7 +5140,7 @@
       {
         "name": 1728679867832,
         "options(primaryKey)": 1728679871452,
-        "dataType": 1729375235433,
+        "dataType": 1730059068867,
         "options(unique)": 1729903804615,
         "options(autoIncrement)": 1729903805382
       }
@@ -5206,7 +5206,7 @@
       {
         "options(notNull)": 1728680110757,
         "name": 1728680110757,
-        "dataType": 1729375235433,
+        "dataType": 1730059068867,
         "default": 1728680110757,
         "comment": 1728680110757
       }
@@ -5300,7 +5300,7 @@
       {
         "options(notNull)": 1728680266323,
         "name": 1728680266323,
-        "dataType": 1729375947853,
+        "dataType": 1730059135056,
         "default": 1728680266323,
         "comment": 1728680266323
       }
@@ -5339,7 +5339,7 @@
       -1,
       {
         "name": 1728684863954,
-        "dataType": 1729981976026,
+        "dataType": 1730059079177,
         "options(notNull)": 1729375301143,
         "comment": 1729982737285
       }
@@ -5350,8 +5350,9 @@
       -1,
       {
         "name": 1729375254856,
-        "dataType": 1729375293408,
-        "options(notNull)": 1729375310585
+        "dataType": 1730059071674,
+        "options(notNull)": 1729375310585,
+        "comment": 1730059076615
       }
     ],
     "wDoKzwT3f2eNqu1E32kLy": [
@@ -5372,7 +5373,7 @@
       {
         "name": 1729374628127,
         "comment": 1729374845091,
-        "dataType": 1729374685633,
+        "dataType": 1730058966702,
         "options(notNull)": 1729374851502
       }
     ],
@@ -5382,7 +5383,7 @@
       -1,
       {
         "name": 1729375184297,
-        "dataType": 1729375191456,
+        "dataType": 1730058969804,
         "options(notNull)": 1729375192463
       }
     ],
@@ -5446,7 +5447,7 @@
       {
         "name": 1729375933745,
         "comment": 1729375937714,
-        "dataType": 1729376186950,
+        "dataType": 1730059142382,
         "options(notNull)": 1729376174804
       }
     ],
@@ -5511,7 +5512,7 @@
       {
         "name": 1729902582168,
         "comment": 1729376138401,
-        "dataType": 1729376151647
+        "dataType": 1730059312799
       }
     ],
     "ypHdJDBDHvw3ZwJHaGq5e": [
@@ -5528,7 +5529,7 @@
       -1,
       {
         "name": 1729898590002,
-        "dataType": 1729898607349,
+        "dataType": 1730059100289,
         "options(notNull)": 1729898632076,
         "options(primaryKey)": 1729898866563,
         "options(autoIncrement)": 1729899246538
@@ -5540,7 +5541,7 @@
       -1,
       {
         "name": 1729898592089,
-        "dataType": 1729898617117,
+        "dataType": 1730059103618,
         "options(notNull)": 1729899247897
       }
     ],
@@ -5550,7 +5551,7 @@
       -1,
       {
         "name": 1729898601188,
-        "dataType": 1729898623124,
+        "dataType": 1730059106394,
         "options(notNull)": 1729899249081
       }
     ],
@@ -5560,7 +5561,7 @@
       -1,
       {
         "name": 1729898604006,
-        "dataType": 1729898629621,
+        "dataType": 1730059108788,
         "options(notNull)": 1729899249859
       }
     ],
@@ -5571,7 +5572,7 @@
       {
         "options(notNull)": 1729898948334,
         "name": 1729898948334,
-        "dataType": 1729898948334,
+        "dataType": 1730059097629,
         "default": 1729898948334,
         "comment": 1729898948334
       }
@@ -5597,7 +5598,7 @@
       {
         "name": 1729981254862,
         "options(primaryKey)": 1729899206350,
-        "dataType": 1729899220898,
+        "dataType": 1730059081109,
         "options(autoIncrement)": 1729899544523
       }
     ],
@@ -5608,7 +5609,7 @@
       {
         "options(notNull)": 1729899217246,
         "name": 1729899217246,
-        "dataType": 1729899217246,
+        "dataType": 1730059097629,
         "default": 1729899217246,
         "comment": 1729899217246
       }
@@ -5625,7 +5626,7 @@
       -1,
       {
         "name": 1729899296701,
-        "dataType": 1729899541054,
+        "dataType": 1730059122266,
         "options(notNull)": 1729899542163,
         "comment": 1729901355092
       }
@@ -5637,7 +5638,7 @@
       {
         "options(notNull)": 1729899310903,
         "name": 1729899310903,
-        "dataType": 1729899310903,
+        "dataType": 1730059030457,
         "default": 1729899310903,
         "comment": 1729900252986
       }
@@ -5655,7 +5656,7 @@
       {
         "name": 1729899506927,
         "comment": 1729978140943,
-        "dataType": 1729903531784,
+        "dataType": 1730059126489,
         "options(notNull)": 1729899526477,
         "default": 1729903545961
       }
@@ -5694,7 +5695,7 @@
       {
         "options(notNull)": 1729899723011,
         "name": 1729981267934,
-        "dataType": 1729899723011,
+        "dataType": 1730059081109,
         "default": 1729899723011,
         "comment": 1729899723011,
         "options(primaryKey)": 1729900338240
@@ -5713,7 +5714,7 @@
       {
         "options(notNull)": 1729900209971,
         "name": 1729900209971,
-        "dataType": 1729900209971,
+        "dataType": 1730059133717,
         "default": 1729900209971,
         "comment": 1729900209971,
         "options(primaryKey)": 1729900339620
@@ -5740,7 +5741,7 @@
       {
         "name": 1729900575102,
         "options(notNull)": 1729900616435,
-        "dataType": 1729900621063,
+        "dataType": 1730059198598,
         "options(autoIncrement)": 1729900636255,
         "options(primaryKey)": 1729900637267
       }
@@ -5752,7 +5753,7 @@
       {
         "name": 1729900582815,
         "options(notNull)": 1729900617049,
-        "dataType": 1729900627407,
+        "dataType": 1730059202414,
         "options(unique)": 1729900641026
       }
     ],
@@ -5763,7 +5764,7 @@
       {
         "name": 1729900595275,
         "options(notNull)": 1729900617532,
-        "dataType": 1729900631870
+        "dataType": 1730059208635
       }
     ],
     "e_FVioB9xa0eyKe8n_qxM": [
@@ -5780,7 +5781,7 @@
       -1,
       {
         "name": 1729900681691,
-        "dataType": 1729900819681,
+        "dataType": 1730059145535,
         "options(notNull)": 1729900912552,
         "options(autoIncrement)": 1729900924581,
         "options(primaryKey)": 1729900927613
@@ -5792,7 +5793,7 @@
       -1,
       {
         "name": 1729900788801,
-        "dataType": 1729900825615,
+        "dataType": 1730059173918,
         "options(notNull)": 1729900913367,
         "comment": 1729902559447
       }
@@ -5803,7 +5804,7 @@
       -1,
       {
         "name": 1729900813592,
-        "dataType": 1729900827690,
+        "dataType": 1730059183074,
         "options(notNull)": 1729900913968,
         "default": 1729900918467
       }
@@ -5831,7 +5832,7 @@
       {
         "options(notNull)": 1729900944430,
         "name": 1729900944430,
-        "dataType": 1729900944430,
+        "dataType": 1730059145535,
         "default": 1729900944430,
         "comment": 1729900944430,
         "options(primaryKey)": 1729901075128
@@ -5850,7 +5851,7 @@
       {
         "options(notNull)": 1729900951337,
         "name": 1729900951337,
-        "dataType": 1729900951337,
+        "dataType": 1730059198598,
         "default": 1729900951337,
         "comment": 1729900951337,
         "options(primaryKey)": 1729901076501
@@ -5869,7 +5870,7 @@
       {
         "options(notNull)": 1729901107705,
         "name": 1729981262339,
-        "dataType": 1729901107705,
+        "dataType": 1730059081109,
         "default": 1729901107705,
         "comment": 1729901107705
       }
@@ -5916,7 +5917,7 @@
       {
         "name": 1729901475839,
         "options(notNull)": 1729901902364,
-        "dataType": 1729902068742,
+        "dataType": 1730059284333,
         "options(primaryKey)": 1729902192997,
         "options(unique)": 1729902198988,
         "options(autoIncrement)": 1729902199458
@@ -5928,7 +5929,7 @@
       -1,
       {
         "name": 1729901941773,
-        "dataType": 1729902164428,
+        "dataType": 1730059287485,
         "options(notNull)": 1729902194902
       }
     ],
@@ -5938,7 +5939,7 @@
       -1,
       {
         "name": 1729901747380,
-        "dataType": 1729902169617,
+        "dataType": 1730059289883,
         "options(notNull)": 1729902195711
       }
     ],
@@ -5948,7 +5949,7 @@
       -1,
       {
         "name": 1729902186974,
-        "dataType": 1729902174275,
+        "dataType": 1730059292116,
         "options(notNull)": 1729902196227
       }
     ],
@@ -5958,7 +5959,7 @@
       -1,
       {
         "name": 1729901731430,
-        "dataType": 1729902179325,
+        "dataType": 1730059294590,
         "options(notNull)": 1729902196802
       }
     ],
@@ -6005,7 +6006,7 @@
       {
         "name": 1729902733344,
         "options(primaryKey)": 1729902792819,
-        "dataType": 1729902932688,
+        "dataType": 1730059067784,
         "options(unique)": 1729902948840,
         "options(autoIncrement)": 1729902949355
       }
@@ -6017,7 +6018,7 @@
       {
         "options(notNull)": 1729902787283,
         "name": 1729902787283,
-        "dataType": 1729902787283,
+        "dataType": 1730059068867,
         "default": 1729902787283,
         "comment": 1729902787283
       }
@@ -6042,7 +6043,7 @@
       -1,
       {
         "name": 1729902887408,
-        "dataType": 1729902940164,
+        "dataType": 1730059021308,
         "options(notNull)": 1729902941792
       }
     ],
@@ -6053,7 +6054,7 @@
       {
         "name": 1729902899879,
         "options(primaryKey)": 1729902910204,
-        "dataType": 1729902924066,
+        "dataType": 1730058997379,
         "options(autoIncrement)": 1729902951220
       }
     ],
@@ -6064,7 +6065,7 @@
       {
         "options(notNull)": 1729902919147,
         "name": 1729902919147,
-        "dataType": 1729902932688,
+        "dataType": 1730059067784,
         "default": 1729902919147,
         "comment": 1729902919147
       }
@@ -6082,7 +6083,7 @@
       {
         "options(notNull)": 1729903074592,
         "name": 1729903074592,
-        "dataType": 1729903074592,
+        "dataType": 1730059030457,
         "default": 1729903074592,
         "comment": 1729903074592
       }
@@ -6099,9 +6100,10 @@
       -1,
       {
         "name": 1729903091978,
-        "dataType": 1729903095629,
+        "dataType": 1730059040612,
         "options(notNull)": 1729903096140,
-        "default": 1729903101224
+        "default": 1730059049721,
+        "comment": 1730059063979
       }
     ],
     "DpBioBojAOoSFhiCn4q6Q": [
@@ -6111,7 +6113,7 @@
       {
         "options(notNull)": 1729903680809,
         "name": 1729981274005,
-        "dataType": 1729903680809,
+        "dataType": 1730059081109,
         "default": 1729903680809,
         "comment": 1729903680809
       }
@@ -6128,7 +6130,7 @@
       -1,
       {
         "name": 1729978242856,
-        "dataType": 1729978246027,
+        "dataType": 1730059190811,
         "options(notNull)": 1729978251559,
         "default": 1729985091337
       }
@@ -6139,7 +6141,7 @@
       -1,
       {
         "name": 1729978339040,
-        "dataType": 1729978342601,
+        "dataType": 1730059211872,
         "options(notNull)": 1729978343696,
         "default": 1729978347786
       }
@@ -6150,7 +6152,7 @@
       -1,
       {
         "name": 1729978592430,
-        "dataType": 1729978598934
+        "dataType": 1730059315123
       }
     ],
     "wNE8Aoka7B76QaQb1hpx5": [
@@ -6159,7 +6161,7 @@
       -1,
       {
         "name": 1729979455682,
-        "dataType": 1729979467486,
+        "dataType": 1730059322174,
         "options(notNull)": 1729979488410
       }
     ],
@@ -6178,7 +6180,7 @@
       {
         "name": 1729979503976,
         "options(primaryKey)": 1729979506709,
-        "dataType": 1729983061335,
+        "dataType": 1730059334362,
         "options(autoIncrement)": 1729983151224
       }
     ],
@@ -6189,7 +6191,7 @@
       {
         "options(notNull)": 1729979515925,
         "name": 1729979515925,
-        "dataType": 1729983061335,
+        "dataType": 1730059334362,
         "default": 1729979515925,
         "comment": 1729979515925
       }
@@ -6243,7 +6245,7 @@
       {
         "name": 1729981056539,
         "options(primaryKey)": 1729981088959,
-        "dataType": 1729985172772,
+        "dataType": 1730059223384,
         "options(autoIncrement)": 1729985192276
       }
     ],
@@ -6253,8 +6255,8 @@
       -1,
       {
         "name": 1729981071447,
-        "comment": 1729981074211,
-        "dataType": 1729985183548,
+        "comment": 1730059246999,
+        "dataType": 1730059227174,
         "options(notNull)": 1729985193414
       }
     ],
@@ -6265,7 +6267,7 @@
       {
         "options(notNull)": 1729981105799,
         "name": 1729981105799,
-        "dataType": 1729981105799,
+        "dataType": 1730059068867,
         "default": 1729981105799,
         "comment": 1729981105799
       }
@@ -6282,7 +6284,7 @@
       -1,
       {
         "name": 1729981137033,
-        "dataType": 1729983068423,
+        "dataType": 1730059339318,
         "options(notNull)": 1729983147192
       }
     ],
@@ -6292,7 +6294,7 @@
       -1,
       {
         "name": 1729981176555,
-        "dataType": 1729983077565,
+        "dataType": 1730059341651,
         "options(notNull)": 1729983147846
       }
     ],
@@ -6311,7 +6313,7 @@
       {
         "name": 1729981300738,
         "options(primaryKey)": 1729981330041,
-        "dataType": 1729981339071,
+        "dataType": 1730059254011,
         "options(autoIncrement)": 1729981424908
       }
     ],
@@ -6321,8 +6323,9 @@
       -1,
       {
         "name": 1729981308774,
-        "dataType": 1729981352302,
-        "options(notNull)": 1729981426646
+        "dataType": 1730059257357,
+        "options(notNull)": 1729981426646,
+        "comment": 1730059271462
       }
     ],
     "Q5xGbW7CK85mICwXRp9y6": [
@@ -6331,8 +6334,9 @@
       -1,
       {
         "name": 1729981321843,
-        "dataType": 1729981359007,
-        "options(notNull)": 1729981427550
+        "dataType": 1730059259972,
+        "options(notNull)": 1729981427550,
+        "comment": 1730059278091
       }
     ],
     "icU6dJhA-SB5j0NVe95Qe": [
@@ -6360,7 +6364,7 @@
       {
         "options(notNull)": 1729981415577,
         "name": 1729981415577,
-        "dataType": 1729981415577,
+        "dataType": 1730059068867,
         "default": 1729981415577,
         "comment": 1729981415577
       }
@@ -6396,7 +6400,7 @@
       {
         "options(notNull)": 1729981464890,
         "name": 1729981464890,
-        "dataType": 1729981464890,
+        "dataType": 1730059254011,
         "default": 1729981464890,
         "comment": 1729981464890
       }
@@ -6413,8 +6417,9 @@
       -1,
       {
         "name": 1729981704339,
-        "dataType": 1729981714851,
-        "options(notNull)": 1729981716530
+        "dataType": 1730059082981,
+        "options(notNull)": 1729981716530,
+        "comment": 1730059088993
       }
     ],
     "MxDuZZOd-rP0bvPrMY-Cn": [
@@ -6423,7 +6428,7 @@
       -1,
       {
         "name": 1729982302445,
-        "dataType": 1729983094024,
+        "dataType": 1730059348784,
         "options(notNull)": 1729983148736
       }
     ],
@@ -6439,7 +6444,8 @@
       -1,
       {
         "name": 1729982437433,
-        "dataType": 1729982461261
+        "dataType": 1730059302778,
+        "comment": 1730059309086
       }
     ],
     "L5X5DnZw0xkxhVabEcluj": [
@@ -6448,7 +6454,8 @@
       -1,
       {
         "name": 1729982444855,
-        "dataType": 1729982463596
+        "dataType": 1730059325362,
+        "comment": 1730059332096
       }
     ],
     "_wb206T8eekMHGuUNNjfi": [
@@ -6458,7 +6465,7 @@
       {
         "options(notNull)": 1729992119023,
         "name": 1729992119023,
-        "dataType": 1729992119023,
+        "dataType": 1730059100289,
         "default": 1729992119023,
         "comment": 1729992119023
       }
