@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">SIAMO</string>
+    <string name="app_title">SISTEMA DE ADMINISTRACIÓN AUTOMOTRIZ</string>
+    <string name="welcome_button">BIENVENIDO</string>
+    <string name="login_title">INICIO DE SESIÓN</string>
+    <string name="login_message">Ingrese sus datos para acceder a su perfil</string>
+    <string name="employee_code_hint">Código de empleado</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="login_success">Inicio de sesión exitoso</string>
+    <string name="login_error">Usuario o contraseña incorrecto</string>
+    <string name="accept">Aceptar</string>
+    <string name="try_again">Intentarlo de nuevo</string>
+    <string name="privacy_policy">Política de privacidad</string>
 </resources>
+
+

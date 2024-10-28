@@ -20,6 +20,9 @@ val AbeezzeRegular = FontFamily(
 val AdaminaRegular = FontFamily(
     Font(R.font.adamina_regular)
 )
+val AboretoRegular = FontFamily(
+    Font(R.font.aboreto_regular)
+)
 
 val Typography = Typography(
     displayLarge = TextStyle(
