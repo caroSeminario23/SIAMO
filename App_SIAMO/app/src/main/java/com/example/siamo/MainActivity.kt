@@ -20,17 +20,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             SIAMOTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Bitacora(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
 
-@Composable
+/*@Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
@@ -44,4 +41,4 @@ fun GreetingPreview() {
     SIAMOTheme {
         Greeting("Android")
     }
-}
+}*/

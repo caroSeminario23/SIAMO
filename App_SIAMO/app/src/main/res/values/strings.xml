@@ -1,3 +1,58 @@
 <resources>
     <string name="app_name">SIAMO</string>
+
+    <string name="idProblema1">1</string>
+    <string name="idProblema2">2</string>
+    <string name="idProblema3">3</string>
+    <string name="idProblema4">4</string>
+    <string name="idProblema5">5</string>
+    <string name="idProblema6">6</string>
+    <string name="idProblema7">7</string>
+    <string name="idProblema8">8</string>
+    <string name="idProblema9">9</string>
+    <string name="idProblema10">10</string>
+
+    <string name="problema1">Fallo en el sistema de encendido</string>
+    <string name="problema2">Frenos duros</string>
+    <string name="problema3">Problema en el sistema de enfriamiento</string>
+    <string name="problema4">Luz de “Check Engine” encendida</string>
+    <string name="problema5">Ruidos en el sistema de suspensión</string>
+    <string name="problema6">Aire acondicionado no enfría</string>
+    <string name="problema7">Dirección hidráulica dura</string>
+    <string name="problema8">Vibración al frenar</string>
+    <string name="problema9">Fuga de aceite</string>
+    <string name="problema10">Problema eléctrico en el tablero</string>
+
+    <string name="detalleProblema1">El vehículo no arranca. Se detectó que el motor de arranque no recibía señal y las bujías estaban en mal estado.</string>
+    <string name="detalleProblema2">El cliente reportó que el pedal del freno estaba muy rígido. Se observó que el servofreno presentaba una fuga.</string>
+    <string name="detalleProblema3">El motor se recalentaba rápidamente. Se detectó una fuga en el radiador.</string>
+    <string name="detalleProblema4">El vehículo mostraba un código de error P0420, que indica un fallo en el catalizador.</string>
+    <string name="detalleProblema5">Se escuchaban ruidos al pasar por baches; los bujes de la suspensión estaban desgastados.</string>
+    <string name="detalleProblema6">La unidad de aire acondicionado solo emitía aire caliente.</string>
+    <string name="detalleProblema7">El volante estaba rígido al girar. Se detectó una fuga en la bomba de dirección.</string>
+    <string name="detalleProblema8">Se percibía una vibración en el volante al frenar debido a discos de freno deformados.</string>
+    <string name="detalleProblema9">Se encontró una mancha de aceite debajo del motor debido a una fuga en el cárter.</string>
+    <string name="detalleProblema10">Algunas luces del tablero no encendían debido a fusibles quemados.</string>
+
+    <string name="idSolucion1">1</string>
+    <string name="idSolucion2">2</string>
+    <string name="idSolucion3">3</string>
+    <string name="idSolucion4">4</string>
+    <string name="idSolucion5">5</string>
+    <string name="idSolucion6">6</string>
+    <string name="idSolucion7">7</string>
+    <string name="idSolucion8">8</string>
+    <string name="idSolucion9">9</string>
+    <string name="idSolucion10">10</string>
+
+    <string name="solucion1">Se recomienda reemplazar las bujías y revisar las conexiones del sistema de arranque.</string>
+    <string name="solucion2">Se recomienda reparar la fuga en el servofreno y reemplazar el líquido de frenos.</string>
+    <string name="solucion3">Se recomienda reemplazar el radiador y agregar líquido refrigerante nuevo.</string>
+    <string name="solucion4">Se recomienda cambiar el sensor de oxígeno y realizar una limpieza en el sistema de escape.</string>
+    <string name="solucion5">Se recomienda reemplazar los bujes y ajustar las barras estabilizadoras.</string>
+    <string name="solucion6">Se recomienda recargar el sistema con gas refrigerante y cambiar el filtro de aire acondicionado.</string>
+    <string name="solucion7">Se recomienda reparar la fuga y rellenar el líquido hidráulico.</string>
+    <string name="solucion8">Se recomienda rectificar los discos de freno y cambiar las pastillas de freno.</string>
+    <string name="solucion9">Se recomienda reemplazar el empaque del cárter y limpiar el área afectada.</string>
+    <string name="solucion10">Se recomienda reemplazar los fusibles defectuosos y verificar el funcionamiento de todas las luces del tablero.</string>
 </resources>
