@@ -100,7 +100,8 @@ fun BitacoraTopAppBar(modifier: Modifier = Modifier) {
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.primary
         ),
-        modifier = modifier.height(dimensionResource(id = R.dimen.topbar_height))
+        modifier = modifier
+            //.height(dimensionResource(id = R.dimen.topbar_height))
     )
 }
 
