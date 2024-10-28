@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">SIAMO</string>
 
+    <string name="topbar_bitacora">Bitáctora de Problemas Técnicos</string>
+
     <string name="idProblema1">1</string>
     <string name="idProblema2">2</string>
     <string name="idProblema3">3</string>

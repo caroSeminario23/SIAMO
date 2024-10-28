@@ -6,11 +6,14 @@ import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
@@ -77,15 +80,27 @@ fun Bitacora(
 fun BitacoraTopAppBar(modifier: Modifier = Modifier) {
     CenterAlignedTopAppBar(
         title = {
-            Text(text = stringResource(id = R.string.app_name),
-                style = MaterialTheme.typography.displayLarge,
-                color = MaterialTheme.colorScheme.secondaryContainer
-            )
+            Column (
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxHeight()
+            ) {
+                Text(
+                    text = stringResource(id = R.string.app_name),
+                    style = MaterialTheme.typography.displayLarge,
+                    color = MaterialTheme.colorScheme.secondaryContainer
+                )
+                Text(
+                    text = stringResource(id = R.string.topbar_bitacora),
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.secondaryContainer
+                )
+            }
         },
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
             containerColor = MaterialTheme.colorScheme.primary
         ),
-        modifier = modifier
+        modifier = modifier.height(dimensionResource(id = R.dimen.topbar_height))
     )
 }
 
