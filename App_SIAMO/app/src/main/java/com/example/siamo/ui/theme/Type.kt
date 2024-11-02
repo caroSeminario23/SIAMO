@@ -24,11 +24,15 @@ val AboretoRegular = FontFamily(
     Font(R.font.aboreto_regular)
 )
 
+val AboretoRegular = FontFamily(
+    Font(R.font.aboreto_regular)
+)
+
 val Typography = Typography(
     displayLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 34.sp,
+        fontFamily = AboretoRegular,
+        fontWeight = FontWeight.Normal, 
+        fontSize = 32.sp,
         lineHeight = 40.sp,
         letterSpacing = 0.sp
     ),
@@ -39,6 +43,13 @@ val Typography = Typography(
         lineHeight = 36.sp,
         letterSpacing = 0.sp
     ),
+    displaySmall = TextStyle(
+        fontFamily = AbeezzeItalic,
+        fontWeight = FontWeight.Normal,
+        fontSize = 18.sp,
+        lineHeight = 18.sp,
+        letterSpacing = 0.sp
+    ),
     labelSmall = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Medium,
@@ -47,12 +58,19 @@ val Typography = Typography(
         letterSpacing = 0.5.sp
     ),
     bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = AdaminaRegular,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
-    )
+    ),
+    bodyMedium = TextStyle(
+        fontFamily = AbeezzeRegular,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.5.sp
+    ),
     /* Other default text styles to override
     titleLarge = TextStyle(
         fontFamily = FontFamily.Default,
