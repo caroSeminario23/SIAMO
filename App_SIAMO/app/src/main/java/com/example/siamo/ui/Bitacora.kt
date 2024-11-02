@@ -1,4 +1,4 @@
-package com.example.siamo
+package com.example.siamo.ui
 
 import androidx.annotation.StringRes
 import androidx.compose.animation.animateColorAsState
@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.lazy.LazyColumn
@@ -43,6 +42,7 @@ import com.example.siamo.data.local.RegistrosBitacora
 import com.example.siamo.ui.theme.SIAMOTheme
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
+import com.example.siamo.R
 
 @Composable
 fun Bitacora(
@@ -233,7 +233,7 @@ fun BitacoraMasInformacion(
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = false)
 @Composable
 fun BitacoraLightThemePreview() {
     SIAMOTheme(darkTheme = false) {
