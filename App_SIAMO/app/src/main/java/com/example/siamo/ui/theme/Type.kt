@@ -20,9 +20,6 @@ val AbeezzeRegular = FontFamily(
 val AdaminaRegular = FontFamily(
     Font(R.font.adamina_regular)
 )
-val AboretoRegular = FontFamily(
-    Font(R.font.aboreto_regular)
-)
 
 val AboretoRegular = FontFamily(
     Font(R.font.aboreto_regular)
@@ -31,7 +28,7 @@ val AboretoRegular = FontFamily(
 val Typography = Typography(
     displayLarge = TextStyle(
         fontFamily = AboretoRegular,
-        fontWeight = FontWeight.Normal, 
+        fontWeight = FontWeight.Normal,
         fontSize = 32.sp,
         lineHeight = 40.sp,
         letterSpacing = 0.sp

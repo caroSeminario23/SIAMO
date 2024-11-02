@@ -4,11 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.siamo.ui.SiamoApp
 import com.example.siamo.ui.theme.SIAMOTheme
 
@@ -19,11 +17,20 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SIAMOTheme {
-                // Aquí llamamos a la función SiamoApp que contiene tu navegación
-                SiamoApp()
+                Surface {
+                    SiamoApp()
+                }
             }
         }
     }
 }
 
-
+@Preview(showBackground = true, showSystemUi = false)
+@Composable
+fun DefaultPreview() {
+    SIAMOTheme {
+        Surface {
+            SiamoApp()
+        }
+    }
+}
