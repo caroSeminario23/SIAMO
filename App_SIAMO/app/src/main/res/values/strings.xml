@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">SIAMO</string>
+    <string name="registro_de_cliente_title">REGISTRO DE CLIENTE</string>
+    <string name="nombres_registro_cliente">Nombres:</string>
+    <string name="apellidos_registro_cliente">Apellidos:</string>
+    <string name="tipo_de_documenato_de_identidad_registro_cliente">Tipo de documenato de identidad:</string>
+    <string name="n_documento_de_identidad_registro_cliente">N° documento de identidad:</string>
+    <string name="direcci_n_registro_cliente">Dirección:</string>
+    <string name="correo_electronico_registro_cliente">Correo electrónico:</string>
+    <string name="telefono_registro_cliente">Teléfono:</string>
+    <string name="registrar_button">Registrar</string>
+    <string name="resgistro_de_ost_title">Resgistro de OST</string>
+    <string name="label_back">Back</string>
+    <string name="label_aceptar">Aceptar</string>
+    <string name="label_cliente_registrado">Cliente registrado exitosamente</string>
 </resources>
