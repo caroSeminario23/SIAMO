@@ -1,4 +1,4 @@
-package com.example.siamo.ui
+package com.example.siamo.ui.bitacora
 
 import androidx.annotation.StringRes
 import androidx.compose.animation.animateColorAsState

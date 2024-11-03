@@ -1,4 +1,4 @@
-package com.example.siamo.ui
+package com.example.siamo.ui.login
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.State

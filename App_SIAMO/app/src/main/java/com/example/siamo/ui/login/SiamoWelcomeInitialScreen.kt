@@ -1,4 +1,4 @@
-package com.example.siamo.ui
+package com.example.siamo.ui.login
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -8,8 +8,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -20,6 +19,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.siamo.R
+import com.example.siamo.ui.navigation.NavigationDestination
+import com.example.siamo.ui.theme.SIAMOTheme
+
+object WelcomeDestination : NavigationDestination {
+    override val route = "welcome"
+    override val titleRes = R.string.app_name
+}
 
 
 @Composable
@@ -33,7 +39,7 @@ fun WelcomeScreen(onWelcomeClick: () -> Unit) {
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight(0.5f) // Ocupa el 50% de la altura
-                .background(Color(0xFF5B5B7E))
+                .background(MaterialTheme.colorScheme.tertiary)
         )
 
         // Parte inferior de color 0xFF0B6780
@@ -41,7 +47,7 @@ fun WelcomeScreen(onWelcomeClick: () -> Unit) {
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight(0.52f)
-                .background(MaterialTheme.colorScheme.inversePrimary)
+                .background(MaterialTheme.colorScheme.primary)
                 .align(Alignment.BottomCenter) // Alinea este Box en la parte inferior
         )
         
@@ -49,7 +55,7 @@ fun WelcomeScreen(onWelcomeClick: () -> Unit) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp),
+                .padding(dimensionResource(R.dimen.padding_medium)),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -64,8 +70,8 @@ fun WelcomeScreen(onWelcomeClick: () -> Unit) {
             // Texto principal
             Text(
                 text = stringResource(R.string.app_title), // Usa una cadena de recursos
-                color = MaterialTheme.colorScheme.inverseSurface, // Cambia a color de texto del tema
-                fontSize = 16.sp,
+                color = MaterialTheme.colorScheme.background, // Cambia a color de texto del tema
+                fontSize = 20.sp,
                 style = TextStyle(
                     fontFamily = FontFamily(Font(R.font.adamina_regular))
                 ),
@@ -78,15 +84,15 @@ fun WelcomeScreen(onWelcomeClick: () -> Unit) {
             Button(
                 onClick = { onWelcomeClick() },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.onSecondaryContainer,
-                    contentColor = MaterialTheme.colorScheme.inversePrimary
+                    containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                    contentColor = MaterialTheme.colorScheme.primary
                 ),
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(dimensionResource(R.dimen.padding_medium)),
                 modifier = Modifier.width(200.dp)
             ) {
                 Text(
                     text = stringResource(R.string.welcome_button),
-                    fontSize = 16.sp,
+                    fontSize = 20.sp,
                     fontFamily = FontFamily(Font(R.font.adamina_regular))
                 )
             }
@@ -98,7 +104,7 @@ fun WelcomeScreen(onWelcomeClick: () -> Unit) {
 @Preview(showBackground = true)
 @Composable
 fun WelcomeScreenPreview() {
-    MaterialTheme {
+    SIAMOTheme {
         WelcomeScreen(onWelcomeClick = {})
     }
 }

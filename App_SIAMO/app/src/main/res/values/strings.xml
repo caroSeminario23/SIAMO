@@ -82,4 +82,10 @@
     <string name="label_back">Back</string>
     <string name="label_aceptar">Aceptar</string>
     <string name="label_cliente_registrado">Cliente registrado exitosamente</string>
+    <string name="buscar_cliente_screen_label">Buscar Cliente</string>
+    <string name="buscar_cliente_error_label">Registrar</string>
+    <string name="buscar_cliente_error_message">Upss... Cliente no encontrado</string>
+    <string name="cliente_encontrado_con_exito_label">Cliente encontrado con éxito</string>
+    <string name="contrasena_label">Contraseña:</string>
+    <string name="codigo_de_empleado_label">Código de empleado:</string>
 </resources>

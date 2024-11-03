@@ -34,7 +34,7 @@ val Typography = Typography(
         letterSpacing = 0.sp
     ),
     displayMedium = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = AbeezzeRegular,
         fontWeight = FontWeight.Normal,
         fontSize = 28.sp,
         lineHeight = 36.sp,

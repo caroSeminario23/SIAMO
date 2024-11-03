@@ -1,4 +1,4 @@
-package com.example.siamo.ui
+package com.example.siamo.ui.login
 // MessageWindow.kt
 
 
@@ -24,7 +24,8 @@ import com.example.siamo.R
 fun MessageWindow(
     message: String,
     isError: Boolean,
-    onDismiss: () -> Unit
+    onDismiss: () -> Unit,
+    onAccept: () -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -53,7 +54,7 @@ fun MessageWindow(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
-                    onClick = { onDismiss() },
+                    onClick = {if (isError) { onDismiss() } else { onAccept() }},
                     colors = ButtonDefaults.buttonColors(
                         containerColor = if (isError)  Color(0xFFBA1A1A) else Color(0xFF5B5B7E),
                         contentColor = Color.White
