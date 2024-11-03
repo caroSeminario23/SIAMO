@@ -1,9 +1,9 @@
 package com.example.siamo.data.local
 
-import com.example.siamo.data.Empleado
+import com.example.siamo.data.Entity.Empleado
 
 object LocalEmpleadoDataProvider {
-    val defaultEmpleado = Empleado(
+    /*val defaultEmpleado = Empleado(
         id = -1,
         codigoEmpleado = -1,
         contraseña = "default_password"
@@ -41,4 +41,5 @@ object LocalEmpleadoDataProvider {
     fun getEmpleadoPorId(id: Int): Empleado {
         return empleados.firstOrNull { it.id == id } ?: defaultEmpleado
     }
+    */
 }

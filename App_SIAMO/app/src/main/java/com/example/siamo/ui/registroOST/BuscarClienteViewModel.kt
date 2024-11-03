@@ -4,7 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.example.siamo.data.Cliente
+import com.example.siamo.data.Entity.Cliente
 import com.example.siamo.data.local.LocalClienteDataProvider
 
 class BuscarClienteViewModel: ViewModel() {

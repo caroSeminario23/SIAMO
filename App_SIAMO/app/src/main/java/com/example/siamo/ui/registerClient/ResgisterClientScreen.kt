@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.siamo.R
 import com.example.siamo.SiamoAppBar
-import com.example.siamo.data.Cliente
+import com.example.siamo.data.Entity.Cliente
 import com.example.siamo.ui.navigation.NavigationDestination
 import com.example.siamo.ui.theme.SIAMOTheme
 import com.example.siamo.ui.utils.AlertaEmergente

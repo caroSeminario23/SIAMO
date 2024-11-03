@@ -1,10 +1,10 @@
 package com.example.siamo.data.local
 
-import com.example.siamo.data.Cliente
+import com.example.siamo.data.Entity.Cliente
 
 object LocalClienteDataProvider {
 
-    val allClientes = listOf(
+    /*val allClientes = listOf(
         Cliente(
             nombres = "Juan",
             apellidos = "Perez",
@@ -29,5 +29,5 @@ object LocalClienteDataProvider {
 
     fun get(id: Int): Cliente? {
         return allClientes.firstOrNull { it.nro_doc == id }
-    }
+    }*/
 }

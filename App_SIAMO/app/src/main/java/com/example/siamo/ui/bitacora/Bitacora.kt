@@ -37,7 +37,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.siamo.data.RegistroBitacora
+import com.example.siamo.data.OthersTemporaly.RegistroBitacora
 import com.example.siamo.data.local.RegistrosBitacora
 import com.example.siamo.ui.theme.SIAMOTheme
 import androidx.compose.ui.Alignment

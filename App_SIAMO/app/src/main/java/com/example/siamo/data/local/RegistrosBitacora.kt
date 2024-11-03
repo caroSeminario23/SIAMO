@@ -1,9 +1,9 @@
 package com.example.siamo.data.local
 
 import com.example.siamo.R
-import com.example.siamo.data.Problema
-import com.example.siamo.data.RegistroBitacora
-import com.example.siamo.data.Solucion
+import com.example.siamo.data.OthersTemporaly.Problema
+import com.example.siamo.data.OthersTemporaly.RegistroBitacora
+import com.example.siamo.data.OthersTemporaly.Solucion
 
 object RegistrosBitacora {
     val registrosBitacora = listOf(

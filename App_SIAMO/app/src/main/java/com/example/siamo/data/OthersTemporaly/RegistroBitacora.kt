@@ -1,4 +1,4 @@
-package com.example.siamo.data
+package com.example.siamo.data.OthersTemporaly
 
 data class RegistroBitacora(
     val problema: Problema,

@@ -1,4 +1,4 @@
-package com.example.siamo.data
+package com.example.siamo.data.OthersTemporaly
 
 import androidx.annotation.StringRes
 
