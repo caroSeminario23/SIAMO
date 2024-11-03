@@ -70,7 +70,11 @@ dependencies {
     ksp("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
     implementation("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
 
+    // Pruebas unitarias
     testImplementation(libs.junit)
+    testImplementation("androidx.room:room-testing:${rootProject.extra["room_version"]}")
+
+    // Pruebas instrumentadas
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
