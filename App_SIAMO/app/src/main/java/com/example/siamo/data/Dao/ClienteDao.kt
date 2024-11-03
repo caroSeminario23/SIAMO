@@ -5,8 +5,10 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 import androidx.room.Update
 import com.example.siamo.data.Entity.Cliente
+import com.example.siamo.data.Relaciones.ClienteConPersona
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -25,4 +27,12 @@ interface ClienteDao {
 
     @Delete
     suspend fun delete(cliente: Cliente)
+
+    @Transaction
+    @Query("SELECT * from clientes ORDER BY idCliente ASC")
+    fun getClientesConPersona(): Flow<List<ClienteConPersona>>
+
+    @Transaction
+    @Query("SELECT * from clientes WHERE idCliente = :id")
+    fun getClienteConPersona(id: Int): Flow<ClienteConPersona>
 }
