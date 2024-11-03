@@ -11,7 +11,6 @@ import com.example.siamo.ui.SiamoApp
 import com.example.siamo.ui.theme.SIAMOTheme
 
 class MainActivity : ComponentActivity() {
-    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

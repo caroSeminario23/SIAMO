@@ -28,6 +28,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
+enum class SiamoScreen(@StringRes val title: Int) {
+    RegistrarOST(title = R.string.resgistro_de_ost_title)
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SiamoAppBar(
@@ -55,9 +59,6 @@ fun SiamoAppBar(
                     color = MaterialTheme.colorScheme.secondaryContainer
 
                 )
-fun SiamoApp() {
-    val navController = rememberNavController()
-    val loginViewModel: SiamoViewModel = viewModel() // Obtener la instancia del ViewModel
 
             }
         },
@@ -77,6 +78,15 @@ fun SiamoApp() {
         modifier = modifier
             .fillMaxWidth()
     )
+}
+
+//
+
+@Composable
+fun SiamoApp() {
+    val navController = rememberNavController()
+    val loginViewModel: SiamoViewModel = viewModel() // Obtener la instancia del ViewModel
+
     NavHost(navController = navController, startDestination = "welcome") {
         composable("welcome") {
             WelcomeScreen(onWelcomeClick = {
