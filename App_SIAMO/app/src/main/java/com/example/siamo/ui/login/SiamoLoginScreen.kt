@@ -50,7 +50,7 @@ fun SiamoLoginScreen(
     onNavigateUp : () -> Unit,
     navigateBack : () -> Unit,
     moveToRegister: () -> Unit,
-    loginViewModel: SiamoViewModel = viewModel(),
+    loginViewModel: SiamoLoginViewModel = viewModel(),
 ) {
 
     Scaffold(
@@ -79,7 +79,7 @@ fun SiamoLoginScreen(
 @Composable
 fun LoginConten(
     onLogin: (String, String) -> Unit,
-    viewModel: SiamoViewModel,
+    viewModel: SiamoLoginViewModel,
     onAccept: () -> Unit,
 //    loginSuccess: Boolean,
     contentPadding: PaddingValues,
@@ -161,12 +161,12 @@ fun LoginConten(
                 ButtonCommon(
                     text = stringResource(R.string.login_button),
                     onClick = {
-                        onLogin(employeeCode, password)
-                        if (viewModel.loginSuccess.value) {
+                        viewModel.onLogin(employeeCode, password)
+                        if (  viewModel.loginSuccess) {
                             messageText = "Inicio de sesión exitoso"
                             isError = false
                             showMessage = true
-                        } else if (viewModel.loginError.value) {
+                        } else if (viewModel.loginError) {
                             messageText = "Usuario o contraseña incorrecto"
                             isError = true
                             showMessage = true

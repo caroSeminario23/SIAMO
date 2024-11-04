@@ -121,7 +121,7 @@ fun BuscarClienteContent(
             )
             ButtonCommon(
                 text = stringResource(R.string.login_button),
-                onClick = { isRegistred = viewModel.buscarCliente(value)
+                onClick = { viewModel.buscarCliente(value)
                           showDialog = true},
                 enable = value.isNotBlank(),
                 modifier = Modifier

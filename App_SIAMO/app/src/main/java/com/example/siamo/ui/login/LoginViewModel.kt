@@ -1,5 +1,6 @@
 package com.example.siamo.ui.login
 
+/*
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.State
 import androidx.lifecycle.ViewModel
@@ -31,3 +32,60 @@ class SiamoViewModel : ViewModel() {
         return LocalEmpleadoDataProvider.isValidEmployee(employeeCode, password)
     }
 }
+*/
+
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.siamo.data.Entity.Empleado
+import com.example.siamo.data.Repository.EmpleadosRepository
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
+
+class SiamoLoginViewModel(private val empleadosRepository: EmpleadosRepository) : ViewModel() {
+
+    // Estado de la UI para el inicio de sesión
+    private val _loginUiState = MutableStateFlow(LoginUiState())
+    val loginUiState: StateFlow<LoginUiState> = _loginUiState
+
+    // Función para manejar el inicio de sesión
+    fun onLogin(employeeCode: String, password: String) {
+        viewModelScope.launch {
+            // Se obtienen todos los empleados como flujo
+            empleadosRepository.getAllEmpleadosStream()
+                .map { empleados ->
+                    // Se busca un empleado que coincida con el código y contraseña
+                    empleados.firstOrNull {
+                        it.codEmpleado.toString() == employeeCode && it.contrasenia == password
+                    }
+                }
+                .collect { empleado ->
+                    if (empleado != null) {
+                        // Login exitoso
+                        _loginUiState.value = _loginUiState.value.copy(
+                            loginSuccess = true,
+                            loginError = false
+                        )
+                    } else {
+                        // Error de login
+                        _loginUiState.value = _loginUiState.value.copy(
+                            loginSuccess = false,
+                            loginError = true
+                        )
+                    }
+                }
+        }
+    }
+}
+
+
+
+// Estado de la UI para el inicio de sesión
+data class LoginUiState(
+    val loginSuccess: Boolean = false,
+    val loginError: Boolean = false
+)
+

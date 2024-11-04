@@ -57,7 +57,7 @@ fun SiamoResgisterScreen(
         containerColor = MaterialTheme.colorScheme.background
     ) { innerPadding ->
         RegistrarClienteBody(
-            onRegister = { cliente -> registerClientViewModel.registerClient(cliente) },
+            onRegister = { cliente -> registerClientViewModel.saveClient() },
             moveToOstRegister = navigateBack,
             contentPadding = innerPadding,
             modifier = modifier
