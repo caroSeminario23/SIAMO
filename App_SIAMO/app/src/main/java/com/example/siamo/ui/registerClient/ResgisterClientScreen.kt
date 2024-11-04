@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.siamo.R
 import com.example.siamo.SiamoAppBar
-import com.example.siamo.data.Entity.Cliente
+import com.example.siamo.ui.AppViewModelProvider
 import com.example.siamo.ui.navigation.NavigationDestination
 import com.example.siamo.ui.theme.SIAMOTheme
 import com.example.siamo.ui.utils.AlertaEmergente
@@ -44,7 +44,7 @@ fun SiamoResgisterScreen(
     moveToOstRegister: () -> Unit,
     navigateBack: () -> Unit,
     modifier: Modifier = Modifier,
-    registerClientViewModel: RegisterClientViewModel = viewModel()
+    registerClientViewModel: RegisterClientViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
     Scaffold(
         topBar = {
@@ -57,7 +57,8 @@ fun SiamoResgisterScreen(
         containerColor = MaterialTheme.colorScheme.background
     ) { innerPadding ->
         RegistrarClienteBody(
-            onRegister = { cliente -> registerClientViewModel.registerClient(cliente) },
+//            onRegister = { registerClientViewModel.saveClient() },
+            viewModel = registerClientViewModel,
             moveToOstRegister = navigateBack,
             contentPadding = innerPadding,
             modifier = modifier
@@ -67,7 +68,17 @@ fun SiamoResgisterScreen(
 
 @Composable
 fun RegistrarClienteBody(
-    onRegister: (Cliente) -> Unit,
+//    onRegister: (
+//        nombres: String,
+//        apellidos: String,
+//        tipoDocumento: String,
+//        numeroDocumento: String,
+//        direccion: String,
+//        correo: String,
+//        telefono: String,
+//        sexo: String
+//            ) -> Unit,
+    viewModel: RegisterClientViewModel,
     moveToOstRegister: () -> Unit,
     contentPadding: PaddingValues,
     modifier: Modifier = Modifier
@@ -169,18 +180,16 @@ fun RegistrarClienteBody(
                 enable = allCompleted,
                 onClick = {
                     showDialog = true
-//                    onRegister(
-//                        Cliente(
-//                            nombres = nombres,
-//                            apellidos = apellidos,
-//                            tipo_doc = tipoDocumento == "DNI",
-//                            nro_doc = numeroDocumento.toInt(),
-//                            direccion = direccion,
-//                            correo = correo,
-//                            telefono = telefono.toInt(),
-//                            sexo = sexo[0]
-//                        )
-//                    )
+                    viewModel.saveClient(
+                        nombres = nombres,
+                        apellidos = apellidos,
+                        tipoDocumento = tipoDocumento,
+                        numeroDocumento = numeroDocumento,
+                        direccion = direccion,
+                        correo = correo,
+                        telefono = telefono,
+                        sexo = sexo
+                    )
                 }
             )
         }

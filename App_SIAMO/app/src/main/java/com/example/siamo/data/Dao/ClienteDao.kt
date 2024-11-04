@@ -35,4 +35,13 @@ interface ClienteDao {
     @Transaction
     @Query("SELECT * from clientes WHERE idCliente = :id")
     fun getClienteConPersona(id: Int): Flow<ClienteConPersona>
+
+    @Transaction
+    @Query("""
+    SELECT * FROM clientes 
+    INNER JOIN personas ON clientes.idPersona = personas.idPersona 
+    WHERE personas.numDoc = :numeroDocumento
+""")
+    fun getClientePorNumeroDocumento(numeroDocumento: String): Flow<ClienteConPersona?>
+
 }

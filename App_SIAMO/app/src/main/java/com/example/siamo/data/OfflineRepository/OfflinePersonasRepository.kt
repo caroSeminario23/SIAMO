@@ -10,7 +10,7 @@ class OfflinePersonasRepository(private val personaDao: PersonaDao) : PersonasRe
 
     override fun getPersonaStream(id: Int): Flow<Persona?> = personaDao.getPersona(id)
 
-    override suspend fun insertPersona(persona: Persona) = personaDao.insert(persona)
+    override suspend fun insertPersona(persona: Persona): Long = personaDao.insert(persona)
 
     override suspend fun updatePersona(persona: Persona) = personaDao.update(persona)
 

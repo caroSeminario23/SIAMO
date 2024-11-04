@@ -1,7 +1,5 @@
 package com.example.siamo.data.local
 
-import com.example.siamo.data.Entity.Empleado
-
 object LocalEmpleadoDataProvider {
     /*val defaultEmpleado = Empleado(
         id = -1,

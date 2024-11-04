@@ -7,7 +7,7 @@ plugins {
 
 buildscript {
     dependencies {
-        classpath("com.android.tools.build:gradle:8.5.2")
+        classpath("com.android.tools.build:gradle:8.6.0")
     }
     extra.apply {
         set("room_version", "2.6.0")

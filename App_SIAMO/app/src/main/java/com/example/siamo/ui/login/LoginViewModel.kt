@@ -1,33 +1,48 @@
 package com.example.siamo.ui.login
 
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.State
 import androidx.lifecycle.ViewModel
-import com.example.siamo.data.local.LocalEmpleadoDataProvider
+import androidx.lifecycle.viewModelScope
+import com.example.siamo.data.Repository.EmpleadosRepository
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
 
-// ViewModel que maneja la lógica de inicio de sesión
-class SiamoViewModel : ViewModel() {
-    // Estado de éxito/error de inicio de sesión
-    private val _loginSuccess = mutableStateOf(false)
-    val loginSuccess: State<Boolean> = _loginSuccess
+class SiamoLoginViewModel(
+    private val empleadosRepository: EmpleadosRepository
+) : ViewModel() {
 
-    private val _loginError = mutableStateOf(false)
-    val loginError: State<Boolean> = _loginError
+    // Estado de la UI para el inicio de sesión
+    private val _loginUiState = MutableStateFlow(LoginUiState())
+    val loginUiState: StateFlow<LoginUiState> = _loginUiState
 
-    fun onLogin(employeeCode: String , password: String) {
-        val employeeCodeInt = employeeCode.toIntOrNull()
-        if (employeeCodeInt != null && validateCredentials(employeeCodeInt, password)) {
-            _loginSuccess.value = true
-            _loginError.value = false
-        } else {
-            _loginError.value = true
-            _loginSuccess.value = false
+    // Función para manejar el inicio de sesión
+    fun onLogin(employeeCode: String, password: String) {
+        viewModelScope.launch {
+            empleadosRepository.getAllEmpleadosStream()
+                .collect { empleados ->
+                    val empleado = empleados.firstOrNull {
+                        it.codEmpleado.toString() == employeeCode && it.contrasenia == password
+                    }
+                    if (empleado != null) {
+                        _loginUiState.value = _loginUiState.value.copy(
+                            loginSuccess = true,
+                            loginError = false
+                        )
+                    } else {
+                        _loginUiState.value = _loginUiState.value.copy(
+                            loginSuccess = false,
+                            loginError = true
+                        )
+                    }
+                }
         }
     }
-
-    // Función de validación de credenciales
-    private fun validateCredentials(employeeCode: Int, password: String): Boolean {
-        // Lógica para validar las credenciales
-        return LocalEmpleadoDataProvider.isValidEmployee(employeeCode, password)
-    }
 }
+
+
+// Estado de la UI para el inicio de sesión
+data class LoginUiState(
+    val loginSuccess: Boolean = false,
+    val loginError: Boolean = false
+)
+

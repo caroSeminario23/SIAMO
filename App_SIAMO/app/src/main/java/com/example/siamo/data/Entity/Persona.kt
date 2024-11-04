@@ -12,7 +12,7 @@ data class Persona(
     val nombres: String,
     val apellidos: String,
     val direccion: String,
-    val sexo: Char,
+    val sexo: String,
     val telefono: String,
     val correo: String
 )

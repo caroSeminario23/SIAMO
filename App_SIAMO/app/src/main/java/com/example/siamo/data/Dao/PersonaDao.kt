@@ -18,7 +18,7 @@ interface PersonaDao {
     fun getPersona(id: Int): Flow<Persona>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(persona: Persona)
+    suspend fun insert(persona: Persona): Long
 
     @Update
     suspend fun update(persona: Persona)

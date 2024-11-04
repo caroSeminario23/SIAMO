@@ -50,7 +50,8 @@ fun Bitacora(
 ) {
     Scaffold (
         topBar = { BitacoraTopAppBar() },
-        containerColor = MaterialTheme.colorScheme.background
+        containerColor = MaterialTheme.colorScheme.background,
+        modifier = modifier
     ) {
         paddingValues ->
         LazyColumn(contentPadding = paddingValues) {

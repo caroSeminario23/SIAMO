@@ -14,9 +14,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,6 +37,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.siamo.R
 import com.example.siamo.SiamoAppBar
+import com.example.siamo.ui.AppViewModelProvider
 import com.example.siamo.ui.navigation.NavigationDestination
 import com.example.siamo.ui.theme.SIAMOTheme
 import com.example.siamo.ui.utils.ButtonCommon
@@ -50,8 +53,13 @@ fun SiamoLoginScreen(
     onNavigateUp : () -> Unit,
     navigateBack : () -> Unit,
     moveToRegister: () -> Unit,
-    loginViewModel: SiamoViewModel = viewModel(),
+    loginViewModel: SiamoLoginViewModel = viewModel(factory = AppViewModelProvider.Factory),
 ) {
+    val loginUiState by loginViewModel.loginUiState.collectAsState()
+
+    var showMessage by rememberSaveable { mutableStateOf(false) }
+    var messageText by rememberSaveable { mutableStateOf("") }
+    var isError by rememberSaveable { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
@@ -65,32 +73,44 @@ fun SiamoLoginScreen(
         LoginConten(
             onLogin = { employeeCode, password ->
                 loginViewModel.onLogin(employeeCode, password)
-                // No navegamos a otra pantalla; solo mostramos mensajes de éxito/error
+                if (loginUiState.loginSuccess) {
+                    messageText = "Inicio de sesión exitoso"
+                    isError = false
+                    showMessage = true
+                } else if (loginUiState.loginError) {
+                    messageText = "Usuario o contraseña incorrecto"
+                    isError = true
+                    showMessage = true
+                }
             },
-//            loginSuccess = loginViewModel.loginSuccess.value,
-//            loginError = loginViewModel.loginError.value,
-            viewModel = loginViewModel,
             onAccept = moveToRegister,
             contentPadding = innerPadding
         )
+
+        if (showMessage) {
+            MessageWindow(
+                message = messageText,
+                isError = isError,
+                onDismiss = { showMessage = false },
+                onAccept = {
+                    showMessage = false
+                    if (!isError) {
+                        moveToRegister()
+                    }
+                }
+            )
+        }
     }
 }
 
 @Composable
 fun LoginConten(
     onLogin: (String, String) -> Unit,
-    viewModel: SiamoViewModel,
     onAccept: () -> Unit,
-//    loginSuccess: Boolean,
     contentPadding: PaddingValues,
-//    loginError: Boolean
 ){
     var employeeCode by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
-//    val passwordVisible by remember { mutableStateOf(false) }
-    var showMessage by remember { mutableStateOf(false) }
-    var messageText by remember { mutableStateOf("") }
-    var isError by remember { mutableStateOf(false) }
 
     // Usando Box como contenedor principal para permitir superposición
     Box(
@@ -105,7 +125,6 @@ fun LoginConten(
             verticalArrangement = Arrangement.Center,
             modifier = Modifier
                 .fillMaxSize()
-//                .padding(innerPadding)
         ) {
             Spacer(modifier = Modifier.weight(1f))
 
@@ -157,20 +176,10 @@ fun LoginConten(
 
                 Spacer(modifier = Modifier.height(28.dp))
 
-                // Botón de login
                 ButtonCommon(
                     text = stringResource(R.string.login_button),
                     onClick = {
                         onLogin(employeeCode, password)
-                        if (viewModel.loginSuccess.value) {
-                            messageText = "Inicio de sesión exitoso"
-                            isError = false
-                            showMessage = true
-                        } else if (viewModel.loginError.value) {
-                            messageText = "Usuario o contraseña incorrecto"
-                            isError = true
-                            showMessage = true
-                        }
                     },
                     enable = employeeCode.isNotBlank() && password.isNotBlank()
                 )
@@ -196,20 +205,7 @@ fun LoginConten(
                 )
             }
         }
-
-        // Superposición de MessageWindow
-        if (showMessage) {
-            MessageWindow(
-                message = messageText,
-                isError = isError,
-                onDismiss = { showMessage = false },
-                onAccept = {
-                    showMessage = false
-                    onAccept()
-                }
-            )
-        }
-    }//
+    }
 }
 
 @Preview
