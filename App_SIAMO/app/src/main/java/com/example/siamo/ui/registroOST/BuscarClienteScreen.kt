@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.siamo.R
 import com.example.siamo.SiamoAppBar
+import com.example.siamo.ui.AppViewModelProvider
 import com.example.siamo.ui.navigation.NavigationDestination
 import com.example.siamo.ui.theme.SIAMOTheme
 import com.example.siamo.ui.utils.AlertaEmergente
@@ -52,7 +53,7 @@ fun BuscarClienteScreen(
     onNavigateUp : () -> Unit,
     navigateBack : () -> Unit,
     moveToRegister: () -> Unit,
-    buscarClienteViewModel: BuscarClienteViewModel = viewModel(),
+    buscarClienteViewModel: BuscarClienteViewModel = viewModel(factory = AppViewModelProvider.Factory),
 ) {
     Scaffold(
         topBar = {
@@ -80,7 +81,7 @@ fun BuscarClienteContent(
 ) {
     var value by rememberSaveable { mutableStateOf("") }
     var showDialog by rememberSaveable { mutableStateOf(false) }
-    var isRegistred by rememberSaveable { mutableStateOf(false) }
+    val isRegistred = viewModel.buscarClienteUiState.isRegistered
 
     Box(
         contentAlignment = Alignment.Center,

@@ -21,9 +21,7 @@ interface AppContainer {
 }
 
 class AppDataContainer(private val context: Context) : AppContainer {
-    /**
-     * Implementation for [ItemsRepository]
-     */
+
     override val personasRepository: PersonasRepository by lazy {
         OfflinePersonasRepository(SiamoDatabase.getDatabase(context).personaDao())
     }

@@ -49,22 +49,42 @@ class RegisterClientViewModel(
     /**
      * Guarda un cliente y su persona asociada en la base de datos.
      */
-    fun saveClient() {
+
+    fun saveClient(
+        nombres: String,
+        apellidos: String,
+        tipoDocumento: String,
+        numeroDocumento: String,
+        direccion: String,
+        correo: String,
+        telefono: String,
+        sexo: String
+    ) {
+        updateUiState(
+            ClientDetails(
+                nombres = nombres,
+                apellidos = apellidos,
+                tipoDocumentoSeleccionado = tipoDocumento,
+                numeroDocumento = numeroDocumento,
+                direccion = direccion,
+                correo = correo,
+                telefono = telefono,
+                sexoSeleccionado = sexo
+            )
+        )
         if (validateInput()) {
             CoroutineScope(Dispatchers.IO).launch {
                 try {
-                    // Primero, crea y guarda la Persona
-                    val persona = clientUiState.clientDetails.toPersona()
-                    personasRepository.insertPersona(persona)
 
-                    // Luego, crea el Cliente usando el idPersona de la persona recién insertada
-                    val cliente = Cliente(idPersona = persona.idPersona)
+                    val persona = clientUiState.clientDetails.toPersona()
+                    val personaId = personasRepository.insertPersona(persona)
+
+                    val cliente = Cliente(idPersona = personaId.toInt())
                     clientesRepository.insertCliente(cliente)
 
-                    // Mostrar diálogo al guardar
                     clientUiState = clientUiState.copy(showDialog = true)
                 } catch (e: Exception) {
-
+                    // Manejo de errores
                 }
             }
         }
@@ -93,15 +113,15 @@ class RegisterClientViewModel(
  */
 fun ClientDetails.toPersona(): Persona = Persona(
     tipoDoc = when (tipoDocumentoSeleccionado) {
-        "DNI" -> 1
-        "Carnet de Extranjería" -> 2
-        else -> 0
+        "DNI" -> 0
+        "Carnet de Extranjería" -> 1
+        else -> -1
     },
     numDoc = numeroDocumento,
     nombres = nombres,
     apellidos = apellidos,
     direccion = direccion,
-    sexo = sexoSeleccionado.firstOrNull() ?: ' ',
+    sexo = sexoSeleccionado.substring(0, 1),
     telefono = telefono,
     correo = correo
 )
