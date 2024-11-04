@@ -9,4 +9,5 @@ interface EmpleadosRepository {
     suspend fun insertEmpleado(empleado: Empleado)
     suspend fun updateEmpleado(empleado: Empleado)
     suspend fun deleteEmpleado(empleado: Empleado)
+    fun getEmpleadoByCodigoAndContraseniaStream(codigo: Int, contrasenia: String): Flow<Empleado?>
 }

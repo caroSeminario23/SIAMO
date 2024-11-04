@@ -15,4 +15,6 @@ class OfflineEmpleadosRepository(private val empleadoDao: EmpleadoDao) : Emplead
     override suspend fun deleteEmpleado(empleado: Empleado) = empleadoDao.delete(empleado)
 
     override suspend fun updateEmpleado(empleado: Empleado) = empleadoDao.update(empleado)
+
+    override fun getEmpleadoByCodigoAndContraseniaStream(codigo: Int, contrasenia: String): Flow<Empleado?> = empleadoDao.getEmpleadoByCodigoYContrasenia(codigo, contrasenia)
 }

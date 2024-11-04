@@ -28,4 +28,7 @@ interface EmpleadoDao {
 
     @Delete
     suspend fun delete(empleado: Empleado)
+
+    @Query("SELECT * from empleados WHERE codEmpleado = :cod AND contrasenia = :contrasenia")
+    fun getEmpleadoByCodigoYContrasenia(cod: Int, contrasenia: String): Flow<Empleado>
 }
