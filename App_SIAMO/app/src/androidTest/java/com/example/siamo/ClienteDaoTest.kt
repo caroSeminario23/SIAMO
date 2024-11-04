@@ -29,7 +29,7 @@ class ClienteDaoTest {
         nombres = "Juan Carlos",
         apellidos = "Perez Aguilar",
         direccion = "Jr. Los Pinos 123",
-        sexo = 'M',
+        sexo = "M",
         telefono = "987654321",
         correo = "juanperez@gmail.com")
     private val persona2 = Persona(
@@ -38,7 +38,7 @@ class ClienteDaoTest {
         nombres = "Maria Soledad",
         apellidos = "Gomez Torres",
         direccion = "Av. Los Alamos 456",
-        sexo = 'F',
+        sexo = "F",
         telefono = "912345678",
         correo = "mariagomez@gmail.com")
     private val cliente1 = Cliente(
